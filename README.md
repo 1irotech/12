@@ -182,7 +182,7 @@ NOW Deploy👇
 ## `CREDITS` 
 <div><button id="boton" type="button">Baileys - By WhiskeySockets & adiwajshing</button></div>
 <a href="https://github.com/WhiskeySockets/Baileys"><img src="https://github.com/WhiskeySockets.png" width="150" height="150" alt="adiwajshing"/></a>
-<div><button id="boton" type="button">Base  - By GURU-BOT</button></div>
+<div><button id="boton" type="button">Base  - By CHEEMS BOTZ</button></div>
 <a href="https://github.com/Guru322"><img src="https://github.com/DGXeon.png" width="150" height="150" alt="Xeon"/></a>
 
 
