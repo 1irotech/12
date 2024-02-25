@@ -37,48 +37,80 @@
 
 const fs = require('fs')
 const chalk = require('chalk')
+if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 //owmner v card
-global.ytname = "YT: S4 Salman YT" //ur yt chanel name
-global.socialm = "GitHub: salmanytofficial" //ur github or insta name
-global.location = "Pakistan, Lahore, Sabzazar" //ur location
+//________________________________________________________________________________________________________
+global.ytname = process.env.YT_NAME || "YT: S4 Salman YT" //ur yt chanel name
+//________________________________________________________________________________________________________
+global.socialm = process.env.MEDIA || "GitHub: salmanytofficial" //ur github or insta name
+//________________________________________________________________________________________________________
+global.location = process.env.GL_INFO || "Pakistan, Lahore, Sabzazar" //ur location
+//________________________________________________________________________________________________________
 
 //new
-global.botname = 'X-BOT-MD' //ur bot name
-global.ownernumber = '923184070915' //ur owner number
-global.ownername = 'Salman Ahmad' //ur owner name
-global.websitex = "https://youtu.com/@s4salmanyt"
-global.wagc = "https://whatsapp.com/channel/0029VaINgEZK0IBaK1nDtE3f"
-global.themeemoji = '🪀'
-global.wm = "X Bot Inc."
-global.botscript = 'https://github.com/salmanytofficial/XLICON-V2-MD' //script link
-global.packname = "𝙂𝙊𝙅𝙊 𝙆𝙐𝙉"
-global.author = "ᗰᗩᗪE ᗷY 𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿"
-global.creator = "923184070915@s.whatsapp.net"
-global.xprefix = '.'
-global.premium = ["923184070915"] // Premium User
+//________________________________________________________________________________________________________
+global.botname = process.env.BOT_NAME || 'XLICON-V3-MD' //ur bot name
+//________________________________________________________________________________________________________
+global.ownernumber = process.env.SUDO || '923184070915' //ur owner number
+//________________________________________________________________________________________________________
+global.ownername = process.env.SUDO_NAME || 'Salman Ahmad' //ur owner name
+//________________________________________________________________________________________________________
+global.websitex = process.env.YT_LINK || "https://youtube.com/@s4salmanyt"
+//________________________________________________________________________________________________________
+global.wagc = process.env.GL_PUSH || "https://whatsapp.com/channel/0029VaINgEZK0IBaK1nDtE3f"
+//________________________________________________________________________________________________________
+global.themeemoji = process.env.GL_EMOJI || '🏮'
+//________________________________________________________________________________________________________
+global.wm = process.env.GL_WM || "© Xʟɪᴄᴏɴ-Iɴᴄ"
+//________________________________________________________________________________________________________
+global.botscript = process.env.GL_SC || 'https://github.com/salmanytofficial/XLICON-V3-MD' //script link
+//________________________________________________________________________________________________________
+global.packname = process.env.PACK_NAME || "𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑"
+//________________________________________________________________________________________________________
+global.author = process.env.AUTHER_NAME || "ᗰᗩᗪE ᗷY 𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿"
+//________________________________________________________________________________________________________
+global.creator = process.env.GL_DEVS || "923184070915@s.whatsapp.net"
+//________________________________________________________________________________________________________
+global.xprefix = process.env.PREFIX || '.'
+//________________________________________________________________________________________________________
+global.premium = process.env.GL_VIP || ["923184070915"] // Premium User
+//________________________________________________________________________________________________________
 global.hituet = 0
+//________________________________________________________________________________________________________
 
 //bot sett
-global.typemenu = 'v4' // menu type 'v1' => 'v8'
-global.typereply = 'v2' // reply type 'v1' => 'v3'
-global.autoblocknumber = '212' //set autoblock country code
-global.antiforeignnumber = '212' //set anti foreign number country code
-global.welcome = false //welcome/left in groups
-global.anticall = false //bot blocks user when called
-global.autoswview = false //auto status/story view
-global.adminevent = false //show promote/demote message
-global.groupevent = false //show update messages in group chat
+//________________________________________________________________________________________________________
+global.typemenu = process.env.MENU_DESIGN || 'v4' // menu type 'v1' => 'v8'
+//________________________________________________________________________________________________________
+global.typereply = process.env.REPLY_TYPE || 'v2' // reply type 'v1' => 'v3'
+//________________________________________________________________________________________________________
+global.autoblocknumber = process.env.AUTO_BAN || '212' //set autoblock country code
+//________________________________________________________________________________________________________
+global.antiforeignnumber = process.env.AUTO_BLOCK || '212' //set anti foreign number country code
+//________________________________________________________________________________________________________
+global.welcome = process.env.WELCOME_MSG || true //welcome/left in groups
+//________________________________________________________________________________________________________
+global.anticall = process.env.GL_NOCALL || false //bot blocks user when called
+//________________________________________________________________________________________________________
+global.autoswview = process.env.AUTO_STATUS_SEEN || true //auto status/story view
+//________________________________________________________________________________________________________
+global.adminevent = process.env.ANNOUNCE_MSG  || true //show promote/demote message
+//________________________________________________________________________________________________________
+global.groupevent = process.env.GROUP_ANNOUNCE_MSG || true //show update messages in group chat
+//________________________________________________________________________________________________________
+
+
 //msg
 global.mess = {
-	limit: 'Your limit is up!',
-	nsfw: 'Nsfw is disabled in this group, Please tell the admin to enable',
-    done: 'Done✓',
-    error: 'Error!',
-    success: 'Here you go!'
+	limit: '_*Your limit is up!*_',
+	nsfw: '_*Nsfw is disabled in this group, Please tell the admin to enable*_',
+    done: '_*Done ✓*_',
+    error: '_*I am having error to execute this*_',
+    success: '_*Here you go!*_'
 }
 //thumbnail
-global.thumb = fs.readFileSync('./XliconMedia/theme/xliconpic.jpg')
+global.thumb = fs.readFileSync('./XeonMedia/theme/xliconpic.jpg')
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
