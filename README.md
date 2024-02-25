@@ -189,14 +189,14 @@ NOW Deploy👇
 ## 📛 `OWNER` 
 <a href="https://github.com/salmanytofficial"><img src="https://github.com/salmanytofficial.png" width="250" height="250" alt="Salman Ahmad"/></a>
   
-**XLICON-V2** - By `salmanytofficial`
+**XLICON-V3** - By `salmanytofficial`
 <br>
 `Development , Maintainence , Bot Updates`
 
 ## 🏷️ `Main Dev` 
 <a href="https://github.com/V-E-N-O-X"><img src="https://github.com/V-E-N-O-X.png" width="250" height="250" alt="VENOX"/></a>
   
-**XLICON-V2** - By `abrahamdw882`
+**XLICON-V3** - By `Slahser Senpai`
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
 
