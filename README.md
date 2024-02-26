@@ -42,7 +42,7 @@ XLICON-V3 is a Cool Multi-Device WhatsApp bot developed by [Salman Ahamed](https
   
 ####
 
-*XLICON-V2* - A Advanced Multi Device whatsapp bot Based on *CHEEMS V10*
+*XLICON-V3* - A Advanced Multi Device whatsapp bot Based on *CHEEMS V10*
 -------
 
 ***
