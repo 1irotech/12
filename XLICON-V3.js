@@ -265,7 +265,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         //anti media
-        const isXliconMedia = m.mtype
+        const isXeonMedia = m.mtype
         //user status
         const isUser = xeonverifieduser.includes(sender)
         const XeonTheCreator = [botNumber, ...owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -787,8 +787,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
   }
-        if (db.data.chats[m.chat].image && isXliconMedia) {
-    if(isXliconMedia === "imageMessage"){
+        if (db.data.chats[m.chat].image && isXeonMedia) {
+    if(isXeonMedia === "imageMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Image Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-image for this group_*`)
@@ -796,8 +796,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antivideo && isXliconMedia) {
-    if(isXliconMedia === "videoMessage"){
+        if (db.data.chats[m.chat].antivideo && isXeonMedia) {
+    if(isXeonMedia === "videoMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Video Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-video for this group_*`)
@@ -805,8 +805,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antisticker && isXliconMedia) {
-    if(isXliconMedia === "stickerMessage"){
+        if (db.data.chats[m.chat].antisticker && isXeonMedia) {
+    if(isXeonMedia === "stickerMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Sticker Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-sticker for this group_*`)
@@ -814,8 +814,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antiaudio && isXliconMedia) {
-    if(isXliconMedia === "audioMessage"){
+        if (db.data.chats[m.chat].antiaudio && isXeonMedia) {
+    if(isXeonMedia === "audioMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Audio Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-audio for this group_*`)
@@ -823,8 +823,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antipoll && isXliconMedia) {
-    if(isXliconMedia === "pollCreationMessage"){
+       if (db.data.chats[m.chat].antipoll && isXeonMedia) {
+    if(isXeonMedia === "pollCreationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Poll Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-poll for this group_*`)
@@ -832,8 +832,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antilocation && isXliconMedia) {
-    if(isXliconMedia === "locationMessage"){
+       if (db.data.chats[m.chat].antilocation && isXeonMedia) {
+    if(isXeonMedia === "locationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Location Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-location for this group_*`)
@@ -841,8 +841,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antidocument && isXliconMedia) {
-    if(isXliconMedia === "documentMessage"){
+       if (db.data.chats[m.chat].antidocument && isXeonMedia) {
+    if(isXeonMedia === "documentMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Document Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-document for this group_*`)
@@ -850,8 +850,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-      if (db.data.chats[m.chat].anticontact && isXliconMedia) {
-    if(isXliconMedia === "contactMessage"){
+      if (db.data.chats[m.chat].anticontact && isXeonMedia) {
+    if(isXeonMedia === "contactMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Contact Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-contact for this group_*`)
@@ -3845,7 +3845,7 @@ if (VoiceNoteXeon.includes(q)) return replygcXlicon("The name is already in use"
 let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
 VoiceNoteXeon.push(q)
 await fsx.copy(delb, `./XliconMedia/audio/${q}.mp3`)
-fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/isXeonMedia.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(delb)
 replygcXlicon(`Success Adding Audio\nCheck by typing ${prefix}listvn`)
 }
@@ -3856,7 +3856,7 @@ if (args.length < 1) return replygcXlicon('Enter the vn name')
 if (!VoiceNoteXeon.includes(q)) return replygcXlicon("The name does not exist in the database")
 let wanu = VoiceNoteXeon.indexOf(q)
 VoiceNoteXeon.splice(wanu, 1)
-fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/isXeonMedia.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(`./XliconMedia/audio/${q}.mp3`)
 replygcXlicon(`Success deleting vn ${q}`)
 }
