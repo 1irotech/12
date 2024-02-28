@@ -35,7 +35,7 @@
     "BOT_NAME": {
       "description": "Set Your Bot Name Here",
       "required": false,
-      "value": "Xʟɪᴄᴏɴ_Mᴅ"
+      "value": "Xʟɪᴄᴏɴ_Mᴅ_V3"
     },
      "PACK_NAME": {
       "description": "Enter Pack Name Here",
@@ -60,7 +60,7 @@
     "MENU_DESIGN": {
       "description": "Choose Any Style v1 => v8",
       "required": false,
-      "value": "v4"
+      "value": "v2"
      },
     "AUTO_STATUS_SEEN": {
       "description": "Auto Status Seen True/False",

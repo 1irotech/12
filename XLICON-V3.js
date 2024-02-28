@@ -265,7 +265,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         //anti media
-        const isXeonMedia = m.mtype
+        const isXliconMedia = m.mtype
         //user status
         const isUser = xeonverifieduser.includes(sender)
         const XeonTheCreator = [botNumber, ...owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -643,7 +643,7 @@ async function styletext(teks) {
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
             result = {
             status: 200,
-            author: 'DGXeon',
+            author: 'SalmanSer',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
             xeonyresult.push(result)
@@ -787,8 +787,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
   }
-        if (db.data.chats[m.chat].image && isXeonMedia) {
-    if(isXeonMedia === "imageMessage"){
+        if (db.data.chats[m.chat].image && isXliconMedia) {
+    if(isXliconMedia === "imageMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Image Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-image for this group_*`)
@@ -796,8 +796,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antivideo && isXeonMedia) {
-    if(isXeonMedia === "videoMessage"){
+        if (db.data.chats[m.chat].antivideo && isXliconMedia) {
+    if(isXliconMedia === "videoMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Video Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-video for this group_*`)
@@ -805,8 +805,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antisticker && isXeonMedia) {
-    if(isXeonMedia === "stickerMessage"){
+        if (db.data.chats[m.chat].antisticker && isXliconMedia) {
+    if(isXliconMedia === "stickerMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Sticker Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-sticker for this group_*`)
@@ -814,8 +814,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antiaudio && isXeonMedia) {
-    if(isXeonMedia === "audioMessage"){
+        if (db.data.chats[m.chat].antiaudio && isXliconMedia) {
+    if(isXliconMedia === "audioMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Audio Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-audio for this group_*`)
@@ -823,8 +823,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antipoll && isXeonMedia) {
-    if(isXeonMedia === "pollCreationMessage"){
+       if (db.data.chats[m.chat].antipoll && isXliconMedia) {
+    if(isXliconMedia === "pollCreationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Poll Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-poll for this group_*`)
@@ -832,8 +832,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antilocation && isXeonMedia) {
-    if(isXeonMedia === "locationMessage"){
+       if (db.data.chats[m.chat].antilocation && isXliconMedia) {
+    if(isXliconMedia === "locationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Location Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-location for this group_*`)
@@ -841,8 +841,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antidocument && isXeonMedia) {
-    if(isXeonMedia === "documentMessage"){
+       if (db.data.chats[m.chat].antidocument && isXliconMedia) {
+    if(isXliconMedia === "documentMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Document Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-document for this group_*`)
@@ -850,8 +850,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-      if (db.data.chats[m.chat].anticontact && isXeonMedia) {
-    if(isXeonMedia === "contactMessage"){
+      if (db.data.chats[m.chat].anticontact && isXliconMedia) {
+    if(isXliconMedia === "contactMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Contact Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-contact for this group_*`)
@@ -1870,7 +1870,7 @@ case 'block': case 'ban': {
                                 showAdAttribution: true,
                                 title: botname,
                                 body: `Sent in ${i.length} Group`,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2897,7 +2897,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -2935,7 +2935,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2951,7 +2951,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2972,7 +2972,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -3114,7 +3114,7 @@ break
                 XliconBotInc.sendMessage(m.chat, {
                     document: audio,
                     mimetype: 'audio/mp3',
-                    fileName: `dgxeon.mp3`
+                    fileName: `SalmanSer.mp3`
                 }, {
                     quoted: m
                 })
@@ -3240,7 +3240,7 @@ break
             }
             break
             case 'fliptext': {
-                if (args.length < 1) return replygcXlicon(`Example:\n${prefix}fliptext dgxeon`)
+                if (args.length < 1) return replygcXlicon(`Example:\n${prefix}fliptext SalmanSer`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 replygcXlicon(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -3845,7 +3845,7 @@ if (VoiceNoteXeon.includes(q)) return replygcXlicon("The name is already in use"
 let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
 VoiceNoteXeon.push(q)
 await fsx.copy(delb, `./XliconMedia/audio/${q}.mp3`)
-fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/isXliconMedia.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(delb)
 replygcXlicon(`Success Adding Audio\nCheck by typing ${prefix}listvn`)
 }
@@ -3856,7 +3856,7 @@ if (args.length < 1) return replygcXlicon('Enter the vn name')
 if (!VoiceNoteXeon.includes(q)) return replygcXlicon("The name does not exist in the database")
 let wanu = VoiceNoteXeon.indexOf(q)
 VoiceNoteXeon.splice(wanu, 1)
-fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/isXliconMedia.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(`./XliconMedia/audio/${q}.mp3`)
 replygcXlicon(`Success deleting vn ${q}`)
 }
@@ -4270,7 +4270,7 @@ await XliconBotInc.sendMessage(m.chat,{
 }
 break
 case 'git': case 'gitclone':
-if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/DGXeon/XliconMedia`)
+if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcXlicon(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -4503,7 +4503,7 @@ case 'spotify':{
             mimetype: 'audio/mpeg',
             ptt: true,
             waveform:  [100, 0, 100, 0, 100, 0, 100],
-            fileName: "dgxeon",
+            fileName: "SalmanSer",
             contextInfo: {
               mentionedJid: [m.sender],
               externalAdReply: {
@@ -5059,107 +5059,107 @@ isForwarded: true,
             case 'akira': case 'akiyama': case 'ana': case 'art': case 'asuna': case 'ayuzawa': case 'boruto': case 'bts': case 'chiho': case 'chitoge': case 'cosplay': case 'cosplayloli': case 'cosplaysagiri': case 'cyber': case 'deidara': case 'doraemon': case 'elaina': case 'emilia': case 'erza': case 'exo':  case 'gamewallpaper': case 'gremory': case 'hacker': case 'hestia': case 'husbu': case 'inori': case 'islamic': case 'isuzu': case 'itachi': case 'itori': case 'jennie': case 'jiso': case 'justina': case 'kaga': case 'kagura': case 'kakasih': case 'kaori': case 'cartoon': case 'shortquote': case 'keneki': case 'kotori': case 'kurumi': case 'lisa': case 'loli': case 'madara': case 'megumin': case 'mikasa': case 'mikey': case 'miku': case 'minato': case 'mountain': case 'naruto': case 'neko': case 'neko2': case 'nekonime': case 'nezuko': case 'onepiece': case 'pentol': case 'pokemon': case 'programming':  case 'randomnime': case 'randomnime2': case 'rize': case 'rose': case 'sagiri': case 'sakura': case 'sasuke': case 'satanic': case 'shina': case 'shinka': case 'shinomiya': case 'shizuka': case 'shota': case 'space': case 'technology': case 'tejina': case 'toukachan': case 'tsunade': case 'waifu': case 'yotsuba': case 'yuki': case 'yulibocil': case 'yumeko':{
 await XliconStickWait()
 let heyy
-if (/akira/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/akira.json')
-if (/akiyama/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/akiyama.json')
-if (/ana/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/ana.json')
-if (/art/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/art.json')
-if (/asuna/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/asuna.json')
-if (/ayuzawa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/ayuzawa.json')
-if (/boneka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/boneka.json')
-if (/boruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/boruto.json')
-if (/bts/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/bts.json')
-if (/cecan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cecan.json')
-if (/chiho/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/chiho.json')
-if (/chitoge/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/chitoge.json')
-if (/cogan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cogan.json')
-if (/cosplay/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cosplay.json')
-if (/cosplayloli/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cosplayloli.json')
-if (/cosplaysagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cosplaysagiri.json')
-if (/cyber/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/cyber.json')
-if (/deidara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/deidara.json')
-if (/doraemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/doraemon.json')
-if (/eba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/eba.json')
-if (/elaina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/elaina.json')
-if (/emilia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/emilia.json')
-if (/erza/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/erza.json')
-if (/exo/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/exo.json')
-if (/femdom/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/femdom.json')
-if (/freefire/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/freefire.json')
-if (/gamewallpaper/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/gamewallpaper.json')
-if (/glasses/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/glasses.json')
-if (/gremory/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/gremory.json')
-if (/hacker/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/hekel.json')
-if (/hestia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/hestia.json')
-if (/husbu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/husbu.json')
-if (/inori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/inori.json')
-if (/islamic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/islamic.json')
-if (/isuzu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/isuzu.json')
-if (/itachi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/itachi.json')
-if (/itori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/itori.json')
-if (/jennie/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/jeni.json')
-if (/jiso/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/jiso.json')
-if (/justina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/justina.json')
-if (/kaga/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kaga.json')
-if (/kagura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kagura.json')
-if (/kakasih/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kakasih.json')
-if (/kaori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kaori.json')
-if (/cartoon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kartun.json')
-if (/shortquote/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/katakata.json')
-if (/keneki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/keneki.json')
-if (/kotori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kotori.json')
-if (/kpop/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kpop.json')
-if (/kucing/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kucing.json')
-if (/kurumi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/kurumi.json')
-if (/lisa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/lisa.json')
-if (/loli/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/loli.json')
-if (/madara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/madara.json')
-if (/megumin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/megumin.json')
-if (/mikasa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/mikasa.json')
-if (/mikey/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/mikey.json')
-if (/miku/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/miku.json')
-if (/minato/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/minato.json')
-if (/mobile/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/mobil.json')
-if (/motor/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/motor.json')
-if (/mountain/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/mountain.json')
-if (/naruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/naruto.json')
-if (/neko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/neko.json')
-if (/neko2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/neko2.json')
-if (/nekonime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/nekonime.json')
-if (/nezuko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/nezuko.json')
-if (/onepiece/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/onepiece.json')
-if (/pentol/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/pentol.json')
-if (/pokemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/pokemon.json')
-if (/profil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/profil.json')
-if (/progamming/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/programming.json')
-if (/pubg/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/pubg.json')
-if (/randblackpink/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/randblackpink.json')
-if (/randomnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/randomnime.json')
-if (/randomnime2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/randomnime2.json')
-if (/rize/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/rize.json')
-if (/rose/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/rose.json')
-if (/ryujin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/ryujin.json')
-if (/sagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/sagiri.json')
-if (/sakura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/sakura.json')
-if (/sasuke/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/sasuke.json')
-if (/satanic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/satanic.json')
-if (/shina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/shina.json')
-if (/shinka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/shinka.json')
-if (/shinomiya/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/shinomiya.json')
-if (/shizuka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/shizuka.json')
-if (/shota/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/shota.json')
-if (/space/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/tatasurya.json')
-if (/technology/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/technology.json')
-if (/tejina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/tejina.json')
-if (/toukachan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/toukachan.json')
-if (/tsunade/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/tsunade.json')
-if (/waifu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/waifu.json')
-if (/wallhp/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/wallhp.json')
-if (/wallml/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/wallml.json')
-if (/wallmlnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/wallnime.json')
-if (/yotsuba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/yotsuba.json')
-if (/yuki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/yuki.json')
-if (/yulibocil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/yulibocil.json')
-if (/yumeko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/yumeko.json')
+if (/akira/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akira.json')
+if (/akiyama/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akiyama.json')
+if (/ana/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ana.json')
+if (/art/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/art.json')
+if (/asuna/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/asuna.json')
+if (/ayuzawa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ayuzawa.json')
+if (/boneka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/boneka.json')
+if (/boruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/boruto.json')
+if (/bts/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/bts.json')
+if (/cecan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cecan.json')
+if (/chiho/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/chiho.json')
+if (/chitoge/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/chitoge.json')
+if (/cogan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cogan.json')
+if (/cosplay/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplay.json')
+if (/cosplayloli/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplayloli.json')
+if (/cosplaysagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplaysagiri.json')
+if (/cyber/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cyber.json')
+if (/deidara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/deidara.json')
+if (/doraemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/doraemon.json')
+if (/eba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/eba.json')
+if (/elaina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/elaina.json')
+if (/emilia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/emilia.json')
+if (/erza/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/erza.json')
+if (/exo/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/exo.json')
+if (/femdom/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/femdom.json')
+if (/freefire/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/freefire.json')
+if (/gamewallpaper/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gamewallpaper.json')
+if (/glasses/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/glasses.json')
+if (/gremory/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gremory.json')
+if (/hacker/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/hekel.json')
+if (/hestia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/hestia.json')
+if (/husbu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/husbu.json')
+if (/inori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/inori.json')
+if (/islamic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/islamic.json')
+if (/isuzu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/isuzu.json')
+if (/itachi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/itachi.json')
+if (/itori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/itori.json')
+if (/jennie/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/jeni.json')
+if (/jiso/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/jiso.json')
+if (/justina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/justina.json')
+if (/kaga/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kaga.json')
+if (/kagura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kagura.json')
+if (/kakasih/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kakasih.json')
+if (/kaori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kaori.json')
+if (/cartoon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kartun.json')
+if (/shortquote/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/katakata.json')
+if (/keneki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/keneki.json')
+if (/kotori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kotori.json')
+if (/kpop/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kpop.json')
+if (/kucing/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kucing.json')
+if (/kurumi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kurumi.json')
+if (/lisa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/lisa.json')
+if (/loli/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/loli.json')
+if (/madara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/madara.json')
+if (/megumin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/megumin.json')
+if (/mikasa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mikasa.json')
+if (/mikey/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mikey.json')
+if (/miku/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/miku.json')
+if (/minato/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/minato.json')
+if (/mobile/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mobil.json')
+if (/motor/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/motor.json')
+if (/mountain/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mountain.json')
+if (/naruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/naruto.json')
+if (/neko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/neko.json')
+if (/neko2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/neko2.json')
+if (/nekonime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/nekonime.json')
+if (/nezuko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/nezuko.json')
+if (/onepiece/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/onepiece.json')
+if (/pentol/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pentol.json')
+if (/pokemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pokemon.json')
+if (/profil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/profil.json')
+if (/progamming/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/programming.json')
+if (/pubg/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pubg.json')
+if (/randblackpink/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randblackpink.json')
+if (/randomnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randomnime.json')
+if (/randomnime2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randomnime2.json')
+if (/rize/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/rize.json')
+if (/rose/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/rose.json')
+if (/ryujin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ryujin.json')
+if (/sagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sagiri.json')
+if (/sakura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sakura.json')
+if (/sasuke/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sasuke.json')
+if (/satanic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/satanic.json')
+if (/shina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shina.json')
+if (/shinka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shinka.json')
+if (/shinomiya/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shinomiya.json')
+if (/shizuka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shizuka.json')
+if (/shota/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shota.json')
+if (/space/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tatasurya.json')
+if (/technology/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/technology.json')
+if (/tejina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tejina.json')
+if (/toukachan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/toukachan.json')
+if (/tsunade/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tsunade.json')
+if (/waifu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/waifu.json')
+if (/wallhp/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallhp.json')
+if (/wallml/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallml.json')
+if (/wallmlnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallnime.json')
+if (/yotsuba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yotsuba.json')
+if (/yuki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yuki.json')
+if (/yulibocil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yulibocil.json')
+if (/yumeko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yumeko.json')
 let yeha = heyy[Math.floor(Math.random() * heyy.length)]
 XliconBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
 }
@@ -6093,8 +6093,8 @@ if (!AntiNsfw) return replygcXlicon(mess.nsfw)
 await XliconStickWait()
 let heyy
     let yeha = heyy[Math.floor(Math.random() * heyy.length)]
-    if (/gifs/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/gifs.json')
-    if (/foot/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/master/foot.json')
+    if (/gifs/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gifs.json')
+    if (/foot/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/foot.json')
 XliconBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
 }
 break
@@ -6189,7 +6189,7 @@ XliconBotInc.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + 
 break
 case 'patrick':
 case 'patricksticker': {
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/main/patrick')
+var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/patrick')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
@@ -6198,7 +6198,7 @@ break
 case 'dogesticker':
 case 'dogestick':
 	case 'doge':{
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/main/doge')
+var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/doge')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
@@ -6206,7 +6206,7 @@ encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname
 break
 case 'lovesticker':
 case 'lovestick' :{
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/main/love')
+var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/love')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
@@ -6215,7 +6215,7 @@ encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname
 break
 case 'gura':
 case 'gurastick':{
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XliconMedia/main/gura')
+var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/gura')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 encmedia = await XliconBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
@@ -6712,7 +6712,7 @@ ${mot} 𝗗𝗮𝘁𝗲 : ${xdate}
 │➛ ${xprefix}ʙᴜɢᴍᴇɴᴜ
 │➛ ${xprefix}ᴏᴛʜᴇʀᴍᴇɴᴜ
 ╰▱╼❲⭐❳`
-if (typemenu === 'v8') {
+if (typemenu === 'v1') {
                     XliconBotInc.sendMessage(m.chat, {
                         image: fs.readFileSync('./XliconMedia/theme/xliconpic.jpg'),
                         caption: xmenu_oh
@@ -6745,7 +6745,7 @@ if (typemenu === 'v8') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -6802,14 +6802,14 @@ if (typemenu === 'v8') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -6867,7 +6867,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -6924,14 +6924,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -6978,7 +6978,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7035,14 +7035,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7089,7 +7089,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7146,14 +7146,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7200,7 +7200,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7257,14 +7257,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7311,7 +7311,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7368,14 +7368,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7422,7 +7422,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7479,14 +7479,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7533,7 +7533,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7590,14 +7590,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7644,7 +7644,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7701,14 +7701,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7755,7 +7755,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7812,14 +7812,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7866,7 +7866,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7923,14 +7923,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7977,7 +7977,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8034,14 +8034,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8088,7 +8088,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8145,14 +8145,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8199,7 +8199,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8256,14 +8256,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8310,7 +8310,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8367,14 +8367,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8421,7 +8421,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8478,14 +8478,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8532,7 +8532,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8589,14 +8589,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8643,7 +8643,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8700,14 +8700,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
