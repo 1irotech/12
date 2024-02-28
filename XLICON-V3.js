@@ -265,7 +265,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         //anti media
-        const isXeonMedia = m.mtype
+        const isXliconMedia = m.mtype
         //user status
         const isUser = xeonverifieduser.includes(sender)
         const XeonTheCreator = [botNumber, ...owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -643,7 +643,7 @@ async function styletext(teks) {
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
             result = {
             status: 200,
-            author: 'Salman Ser',
+            author: 'SalmanSer',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
             xeonyresult.push(result)
@@ -787,8 +787,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
   }
-        if (db.data.chats[m.chat].image && isXeonMedia) {
-    if(isXeonMedia === "imageMessage"){
+        if (db.data.chats[m.chat].image && isXliconMedia) {
+    if(isXliconMedia === "imageMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Image Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-image for this group_*`)
@@ -796,8 +796,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antivideo && isXeonMedia) {
-    if(isXeonMedia === "videoMessage"){
+        if (db.data.chats[m.chat].antivideo && isXliconMedia) {
+    if(isXliconMedia === "videoMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Video Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-video for this group_*`)
@@ -805,8 +805,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antisticker && isXeonMedia) {
-    if(isXeonMedia === "stickerMessage"){
+        if (db.data.chats[m.chat].antisticker && isXliconMedia) {
+    if(isXliconMedia === "stickerMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Sticker Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-sticker for this group_*`)
@@ -814,8 +814,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-        if (db.data.chats[m.chat].antiaudio && isXeonMedia) {
-    if(isXeonMedia === "audioMessage"){
+        if (db.data.chats[m.chat].antiaudio && isXliconMedia) {
+    if(isXliconMedia === "audioMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Audio Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-audio for this group_*`)
@@ -823,8 +823,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antipoll && isXeonMedia) {
-    if(isXeonMedia === "pollCreationMessage"){
+       if (db.data.chats[m.chat].antipoll && isXliconMedia) {
+    if(isXliconMedia === "pollCreationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Poll Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-poll for this group_*`)
@@ -832,8 +832,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antilocation && isXeonMedia) {
-    if(isXeonMedia === "locationMessage"){
+       if (db.data.chats[m.chat].antilocation && isXliconMedia) {
+    if(isXliconMedia === "locationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Location Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-location for this group_*`)
@@ -841,8 +841,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-       if (db.data.chats[m.chat].antidocument && isXeonMedia) {
-    if(isXeonMedia === "documentMessage"){
+       if (db.data.chats[m.chat].antidocument && isXliconMedia) {
+    if(isXliconMedia === "documentMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Document Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-document for this group_*`)
@@ -850,8 +850,8 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         }
     }
   }
-      if (db.data.chats[m.chat].anticontact && isXeonMedia) {
-    if(isXeonMedia === "contactMessage"){
+      if (db.data.chats[m.chat].anticontact && isXliconMedia) {
+    if(isXliconMedia === "contactMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
           replygcXlicon(`\`\`\`「 Contact Detected 」\`\`\`\n\n*_Sorry, but I have to delete it, because the admin/owner has activated anti-contact for this group_*`)
@@ -1870,7 +1870,7 @@ case 'block': case 'ban': {
                                 showAdAttribution: true,
                                 title: botname,
                                 body: `Sent in ${i.length} Group`,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2897,7 +2897,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -2935,7 +2935,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2951,7 +2951,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                                thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2972,7 +2972,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -3845,7 +3845,7 @@ if (VoiceNoteXeon.includes(q)) return replygcXlicon("The name is already in use"
 let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
 VoiceNoteXeon.push(q)
 await fsx.copy(delb, `./XliconMedia/audio/${q}.mp3`)
-fs.writeFileSync('./XliconMedia/database/Xliconvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(delb)
 replygcXlicon(`Success Adding Audio\nCheck by typing ${prefix}listvn`)
 }
@@ -3856,7 +3856,7 @@ if (args.length < 1) return replygcXlicon('Enter the vn name')
 if (!VoiceNoteXeon.includes(q)) return replygcXlicon("The name does not exist in the database")
 let wanu = VoiceNoteXeon.indexOf(q)
 VoiceNoteXeon.splice(wanu, 1)
-fs.writeFileSync('./XliconMedia/database/Xliconvn.json', JSON.stringify(VoiceNoteXeon))
+fs.writeFileSync('./XliconMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(`./XliconMedia/audio/${q}.mp3`)
 replygcXlicon(`Success deleting vn ${q}`)
 }
@@ -4270,7 +4270,7 @@ await XliconBotInc.sendMessage(m.chat,{
 }
 break
 case 'git': case 'gitclone':
-if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-V3-MD`)
+if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcXlicon(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -4503,7 +4503,7 @@ case 'spotify':{
             mimetype: 'audio/mpeg',
             ptt: true,
             waveform:  [100, 0, 100, 0, 100, 0, 100],
-            fileName: "Salman Ser",
+            fileName: "SalmanSer",
             contextInfo: {
               mentionedJid: [m.sender],
               externalAdReply: {
@@ -5201,7 +5201,7 @@ mentionedJid:[xeonshimts],
 "containsAutoReply": true,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./XeonMedia/theme/xliconpic.jpg`),
+"thumbnail": fs.readFileSync(`./XliconMedia/theme/xliconpic.jpg`),
 "sourceUrl": `${wagc}`
 }
 }
@@ -6745,7 +6745,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -6802,14 +6802,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -6867,7 +6867,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -6924,14 +6924,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -6978,7 +6978,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7035,14 +7035,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7089,7 +7089,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7146,14 +7146,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7200,7 +7200,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7257,14 +7257,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7311,7 +7311,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7368,14 +7368,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7422,7 +7422,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7479,14 +7479,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7533,7 +7533,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7590,14 +7590,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7644,7 +7644,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7701,14 +7701,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7755,7 +7755,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7812,14 +7812,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7866,7 +7866,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -7923,14 +7923,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7977,7 +7977,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8034,14 +8034,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8088,7 +8088,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8145,14 +8145,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8199,7 +8199,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8256,14 +8256,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8310,7 +8310,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8367,14 +8367,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8421,7 +8421,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8478,14 +8478,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8532,7 +8532,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8589,14 +8589,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8643,7 +8643,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v4') {
                     XliconBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
                         caption: xmenu_oh,
                         gifPlayback: true
                     }, {
@@ -8700,14 +8700,14 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v8') {
                 	XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/LYk2RQm/XLICON.jpg',
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
