@@ -237,8 +237,8 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/DGXeon/CheemsBot-MD8.git
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD.git
+cd XLICON-V3-MD
 
 npm start
 ```
@@ -254,8 +254,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/DGXeon/CheemsBot-MD8
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD
+cd XLICON-V3-MD
 yarn install
 npm start
 ```
@@ -267,8 +267,8 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagrmagick
 apt install bash
-git clone https://github.com/DGXeon/CheemsBot-MD8
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD
+cd XLICON-V3-MD
 npm start
 ```
 ## `For 24/7 Activation (Termux)`
