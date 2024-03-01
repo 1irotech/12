@@ -45,7 +45,7 @@ global.ytname = process.env.YT_NAME || "YT: S4 Salman YT" //ur yt chanel name
 //________________________________________________________________________________________________________
 global.socialm = process.env.MEDIA || "GitHub: salmanytofficial" //ur github or insta name
 //________________________________________________________________________________________________________
-global.location = process.env.GL_INFO || "Pakistan, Lahore, Sabzazar" //ur location
+global.location = process.env.GL_INFO || "west africa" //ur location
 //________________________________________________________________________________________________________
 
 //new
