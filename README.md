@@ -11,7 +11,7 @@
 >XLICON-V3-MD is based on :
 >- [Cheems V10](https://github.com/DGXeon) by [DGXeon](https://github.com/DGXeon) (License: Apache License 2.0)
 >
-> :octocat: Don't forget to check out! :point_right: [Cheems V10](https://github.com/DGXeon)
+> :unicorn: Don't forget to check out! :point_right: [Cheems V10](https://github.com/DGXeon)
 </p>
 
 ## 🌟 `Bot Intro and Features`
@@ -183,7 +183,7 @@ NOW Deploy👇
 <div><button id="boton" type="button">Baileys - By WhiskeySockets & adiwajshing</button></div>
 <a href="https://github.com/WhiskeySockets/Baileys"><img src="https://github.com/WhiskeySockets.png" width="150" height="150" alt="adiwajshing"/></a>
 <div><button id="boton" type="button">Base  - By CHEEMS BOTZ</button></div>
-<a href="https://github.com/Guru322"><img src="https://github.com/DGXeon.png" width="150" height="150" alt="Xeon"/></a>
+<a href="https://github.com/DGXeon"><img src="https://github.com/DGXeon.png" width="150" height="150" alt="Xeon"/></a>
 
 
 ## 📛 `OWNER` 
@@ -237,8 +237,8 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/DGXeon/CheemsBot-MD8.git
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD.git
+cd XLICON-V3-MD
 
 npm start
 ```
@@ -254,8 +254,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/DGXeon/CheemsBot-MD8
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD
+cd XLICON-V3-MD
 yarn install
 npm start
 ```
@@ -267,8 +267,8 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagrmagick
 apt install bash
-git clone https://github.com/DGXeon/CheemsBot-MD8
-cd CheemsBot-MD8
+git clone https://github.com/<your gitHub Username>/XLICON-V3-MD
+cd XLICON-V3-MD
 npm start
 ```
 ## `For 24/7 Activation (Termux)`
