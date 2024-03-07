@@ -692,8 +692,9 @@ async function styletext(teks) {
         }
         //auto set bio\\
 	if (db.data.settings[botNumber].autobio) {
-            XliconBotInc.updateProfileStatus(`${botname} *_Have Been Running For_* ${runtime(process.uptime())}`).catch(_ => _)
-        }
+            XliconBotInc.updateProfileStatus(`${botname} 📃 𝐇𝐚𝐯𝐞 𝐁𝐞𝐞𝐧 𝐑𝐮𝐧𝐧𝐢𝐧𝐠 💻 ${runtime(process.uptime())}...                                   ~𝐒𝐓𝐀𝐑 ⭐ 𝐓𝐡𝐞 𝐁𝐨𝐭 𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐎𝐧 𝐆𝐢𝐭𝐇𝐮𝐛...                       🏮 © Xʟɪᴄᴏɴ-Iɴᴄ
+     `).catch(_ => _)
+	}
      //auto type record
         if (db.data.settings[botNumber].autorecordtype){
         if (isCommand) {
