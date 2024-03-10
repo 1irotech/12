@@ -57,10 +57,14 @@ Thanks to all contributors! 🚀
 - [`Buy ME A Coffee ☕ `](https://i.ibb.co/SBXWb1R/donate.jpg)
 
 <p align="left">
-Scan qr code from the above button, u can pay through Buy Me A Coffee.
+Scan qr code from the above button, u can pay through Buy Me A Coffee...
 </p>
 
+- [`Support Me On Patreon ☕ `](https://www.patreon.com/ahmmikun/membership)
 
+<p align="left">
+Click On The Link To Donate ME...
+</p>
 
 ## 🚀 `Bot Features`
 | Feature                          | Description                                             | Available    | Version    |
@@ -98,7 +102,7 @@ Scan qr code from the above button, u can pay through Buy Me A Coffee.
 
 2. Now Deploy
     <br>
-<a href='https://dashboard.heroku.com/new?template=https://github.com/salmanytofficial/XLICON-V3-MD' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+<a href='https://xlcon-v3-deloy.vercel.app/' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
 #### DEPLOY TO REPLIT
 
@@ -222,6 +226,13 @@ NOW Deploy👇
 <a aria-label="Join our chats" href="https://wa.me/923184070915?text=Hi!! SalmanAhmad Sir, I need Your Help" target="_blank">
     <img alt="whatsapp" src="https://img.shields.io/badge/Owner%20Whatsapp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </p>
+
+- [`Support Me On Patreon ☕ `](https://www.patreon.com/ahmmikun/membership)
+
+<p align="left">
+Click On The Link To Donate ME...
+</p>
+
 
 - **Buy Me a Coffee:** `Your support will help me stay motivated and continue working on exciting projects like this one.`
 
