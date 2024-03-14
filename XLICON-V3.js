@@ -4677,7 +4677,7 @@ break
 case 'ringtone': {
 		if (!text) return replygcXlicon(`Example : ${prefix + command} black rover`)
         let ringtone = require('./lib/scraper')
-		let anutone2 = await ringtone(text)
+		let anutone2 = await ringtone.ringtone(text)
 		let result = anutone2[Math.floor(Math.random() * anutone2.length)]
 		XliconBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
