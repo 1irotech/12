@@ -1156,7 +1156,7 @@ Type *surrender* to surrender and admit defeat`
             }
         }
         
-        //Suit PvP
+        //RPS
 	    this.suit = this.suit ? this.suit : {}
 	    let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
 	    if (roof) {
@@ -1164,7 +1164,7 @@ Type *surrender* to surrender and admit defeat`
 	    let tie = false
 	    if (m.sender == roof.p2 && /^(acc(ept)?|accept|yes|okay?|reject|no|later|nop(e.)?yes|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
 	    if (/^(reject|no|later|n|nop(e.)?yes)/i.test(m.text)) {
-	    XliconBotInc.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} rejected the suit, the suit is canceled`, m)
+	    XliconBotInc.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} rejected the challange, what a loser.`, m)
 	    delete this.suit[roof.id]
 	    return !0
 	    }
@@ -1172,20 +1172,20 @@ Type *surrender* to surrender and admit defeat`
 	    roof.asal = m.chat
 	    clearTimeout(roof.waktu)
 	    //delete roof[roof.id].waktu
-	    XliconBotInc.sendText(m.chat, `Suit has been sent to chat
+	    XliconBotInc.sendText(m.chat, `Game has been sent in DMs
 
 @${roof.p.split`@`[0]} and 
 @${roof.p2.split`@`[0]}
 
-Please choose a suit in the respective chat"
+Please choose an option in the respective chat"
 click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
 	    if (!roof.pilih) XliconBotInc.sendText(roof.p, `Please Select \n\Rock🗿\nPaper📄\nScissors✂️`, m)
 	    if (!roof.pilih2) XliconBotInc.sendText(roof.p2, `Please Select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
 	    roof.waktu_milih = setTimeout(() => {
-	    if (!roof.pilih && !roof.pilih2) XliconBotInc.sendText(m.chat, `Both Players Don't Want To Play,\nSuit Canceled`)
+	    if (!roof.pilih && !roof.pilih2) XliconBotInc.sendText(m.chat, `Both Players Don't Want To Play,\nGame Canceled`)
 	    else if (!roof.pilih || !roof.pilih2) {
 	    win = !roof.pilih ? roof.p2 : roof.p
-	    XliconBotInc.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose Suit, Game Over!`, m)
+	    XliconBotInc.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose an Option, Game Over!`, m)
 	    }
 	    delete this.suit[roof.id]
 	    return !0
@@ -1220,7 +1220,7 @@ click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 	    else if (k.test(stage) && b.test(stage2)) win = roof.p
 	    else if (k.test(stage) && g.test(stage2)) win = roof.p2
 	    else if (stage == stage2) tie = true
-	    XliconBotInc.sendText(roof.asal, `_*Suit Results*_${tie ? '\nSERIES' : ''}
+	    XliconBotInc.sendText(roof.asal, `_*Game Result*_${tie ? '\nTIE' : ''}
 
 @${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Win \n` : ` Lost \n`}
 @${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Win \n` : ` Lost  \n`}
@@ -3471,24 +3471,24 @@ Type *surrender* to give up and admit defeat`
                 }
             }
             break
-            case 'suitpvp':
-            case 'suit': {
+            case 'rockpaperscissors':
+            case 'rps': {
                 this.suit = this.suit ? this.suit : {}
                 let poin = 10
                 let poin_lose = 10
                 let timeout = 60000
-                if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) replygcXlicon(`Finish your previous suit`)
-                if (m.mentionedJid[0] === m.sender) return replygcXlicon(`Can't play with myself !`)
-                if (!m.mentionedJid[0]) return replygcXlicon(`_Who do you want to challenge?_\nTag the person..\n\nExample : ${prefix}suit @${owner[1]}`, m.chat, {
+                if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) replygcXlicon(`Finish your previous RPS game.`)
+                if (m.mentionedJid[0] === m.sender) return replygcXlicon(`Can't play with yourself. !`)
+                if (!m.mentionedJid[0]) return replygcXlicon(`_Who do you want to challenge?_\nTag the person aswell..\n\nExample : ${prefix}rps @${owner[1]}`, m.chat, {
                     mentions: [owner[1] + '@s.whatsapp.net']
                 })
-                if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) return replygcXlicon(`The person you are challenging is playing suit with someone else :(`)
+                if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) return replygcXlicon(`The person you are challenging is playing rps with someone else :(`)
                 let id = 'suit_' + new Date() * 1
-                let caption = `_*SUIT PvP*_
+                let caption = `_*ROCK PAPER SCISSORS*_
 
-@${m.sender.split`@`[0]} challenged @${m.mentionedJid[0].split`@`[0]} to play suits
+@${m.sender.split`@`[0]} challenged @${m.mentionedJid[0].split`@`[0]} to play rock paper scissors
 
-Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
+@${m.mentionedJid[0].split`@`[0]} Please type *accept* or *reject*...`
                 this.suit[id] = {
                     chat: await XliconBotInc.sendText(m.chat, caption, m, {
                         mentions: parseMention(caption)
@@ -3498,7 +3498,7 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
                     p2: m.mentionedJid[0],
                     status: 'wait',
                     waktu: setTimeout(() => {
-                        if (this.suit[id]) XliconBotInc.sendText(m.chat, `_Suit time is up_`, m)
+                        if (this.suit[id]) XliconBotInc.sendText(m.chat, `_Game time is up_`, m)
                         delete this.suit[id]
                     }, 60000),
                     poin,
