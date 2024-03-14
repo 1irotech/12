@@ -2,7 +2,7 @@
 //                                                                                                      //
 //                                 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑-𝐌𝐃    𝐁𝐎𝐓                                                //
 //                                                                                                      // 
-//                                         Ｖ：3.0                                                      // 
+//                                         Ｖ：3.0                                                      //  
 //                                                                                                      // 
 //              ██╗  ██╗██╗     ██╗ ██████╗ ██████╗ ███╗   ██╗      ██╗   ██╗██████╗                    //
 //              ╚██╗██╔╝██║     ██║██╔════╝██╔═══██╗████╗  ██║      ██║   ██║╚════██╗                   //
@@ -68,6 +68,9 @@ const googleTTS = require('google-tts-api')
 const jsobfus = require('javascript-obfuscator')
 const {translate} = require('@vitalets/google-translate-api')
 const scp2 = require('./lib/scraper2') 
+const pkg = require('imgur')
+const { ImgurClient } = pkg
+const client = new ImgurClient({ clientId: "a0113354926015a" })
 const {
     exec,
     spawn,
@@ -149,7 +152,6 @@ const { xeontext2 } = require('./src/data/function/XBug/Xlicontext2')
 const { xeontext3 } = require('./src/data/function/XBug/Xlicontext3')
 const { xeontext4 } = require('./src/data/function/XBug/Xlicontext4')
 const { xeontext5 } = require('./src/data/function/XBug/Xlicontext5')
-
 
 const xeonverifieduser = JSON.parse(fs.readFileSync('./src/data/role/user.json'))
 
@@ -264,7 +266,9 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
-        //anti media
+	const mentionByReply = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.participant || '' : ''    
+        const mentionByTag = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.mentionedJid : []
+	//anti media
         const isXliconMedia = m.mtype
         //user status
         const isUser = xeonverifieduser.includes(sender)
@@ -346,6 +350,35 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
                }, { quoted: m })
             }
         }
+        
+        //fake bug
+        const fbug2 = {key: {participant: "0@s.whatsapp.net","remoteJid": "status@broadcast"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": `${xeontext1}`, "caption": `${xeontext1}`, 'jpegThumbnail': thumb}}}
+        let fbug = { 
+            key: { 
+               fromMe: false, 
+               participant: `0@s.whatsapp.net`,  
+               ...(m.chat ? {  remoteJid: "status@broadcast"  } : {}) 
+            },
+               message: {  
+                  "imageMessage": { 
+                     "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", 
+                     "mimetype": "image/jpeg", 
+                     "caption": `${xeontext3}`,
+                     "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", 
+                     "fileLength": "999999999",
+                     "height": 999999999,
+                     "width": 999999999,
+                     "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                     "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                     "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                     "mediaKeyTimestamp": "1610993486",
+                     "jpegThumbnail": await reSize(thumb, 100, 100),
+                     "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                  }
+               }
+            }
+            //end fbug
+            
         let fstatus = { 
             key: { 
                fromMe: false, 
@@ -371,7 +404,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
                }
             }
             
-            //Fake quoted
+            //Fake quoted 
         const fpay = { key: { remoteJid: '0@s.whatsapp.net', fromMe: false, id:global.botname, participant: '0@s.whatsapp.net'}, message: { requestPaymentMessage: { currencyCodeIso4217: "USD", amount1000: 999999999, requestFrom: '0@s.whatsapp.net', noteMessage: { extendedTextMessage: { text: global.botname}}, expiryTimestamp: 999999999, amount: { value: 91929291929, offset: 1000, currencyCode: "USD"}}}}
 	    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: thumb, surface: 200, message: botname, orderTitle: ownername, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 		const fdoc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {documentMessage: {title: botname,jpegThumbnail: thumb}}}
@@ -532,6 +565,23 @@ return arr[Math.floor(Math.random() * arr.length)]
         } catch (err) {
             console.log(err)
         }
+        
+        //photo uploader
+        async function uploadtoimgur(imagepath) {
+  try {
+    const response = await client.upload({
+      image: fs.createReadStream(imagepath),
+      type: 'stream',
+    })
+
+    let url = response.data.link
+    console.log(url)
+    return url
+  } catch (error) {
+    console.error('Error uploading image to Imgur:', error)
+    throw error
+  }
+}
         
         async function ephoto(url, texk) {
 let form = new FormData 
@@ -749,7 +799,6 @@ list.push({
         
         //antiviewonce
     if ( db.data.chats[m.chat].antiviewonce && m.isGroup && m.mtype == 'viewOnceMessageV2') {
-    	if (m.isBaileys && m.fromMe) return
         let val = { ...m }
         let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
         delete msg[Object.keys(msg)[0]].viewOnce
@@ -2544,6 +2593,7 @@ if (!XeonTheCreator) return XliconStickOwner()
                 }
                 break
             case 'tagall':
+            case 'tag':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XliconStickAdmin()
                 if (!isBotAdmins) return XliconStickBotAdmin()
@@ -2909,9 +2959,30 @@ break
                 })
             }
             break
-            case 'rentbot':
-                replygcXlicon(`Type ${prefix}owner and chat him`)
-                break
+			
+//rentbotadded here			
+			
+           case 'rentbot': {
+if (m.isGroup) return XeonStickPrivate()
+if (!XeonTheCreator) return XeonStickOwner()
+rentfromxeon(XeonBotInc, m, from)
+}
+break
+case 'rentbotlist': 
+try {
+let user = [... new Set([...global.conns.filter(XeonBotInc => XeonBotInc.user).map(XeonBotInc => XeonBotInc.user)])]
+te = "*Rentbot List*\n\n"
+for (let i of user){
+y = await XeonBotInc.decodeJid(i.id)
+te += " × User : @" + y.split("@")[0] + "\n"
+te += " × Name : " + i.name + "\n\n"
+}
+XeonBotInc.sendMessage(from,{text:te,mentions: [y], },{quoted:m})
+} catch (err) {
+replygcxeon(`There are no users who have rented the bot yet`)
+}
+break
+			
             case 'speedtest': {
                 replygcXlicon('Testing Speed...')
                 let cp = require('child_process')
@@ -3256,7 +3327,7 @@ break
    let buff = getRandom('.jpg')
    await fs.writeFileSync('./'+buff, data)
    let medi = fs.readFileSync('./' + buff)
-  await XliconBotInc.sendMessage(from, { image: medi, caption:"Here you go!"}, { quoted: m })
+  await XliconBotInc.sendMessage(from, { image: medi, caption:"➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�"}, { quoted: m })
    setTimeout(() => { fs.unlinkSync(buff) }, 10000)
   }
   break
@@ -4284,7 +4355,7 @@ case 'tiktok':{
 if (!q) return replygcXlicon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcXlicon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
-XliconBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.watermark }}, {quoted:m})
+XliconBotInc.sendMessage(m.chat, { caption: `➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�`, video: { url: data.watermark }}, {quoted:m})
 })
 }
 break
@@ -5806,8 +5877,8 @@ let animetxt = `
                 await XliconBotInc.sendMessage(m.chat,{image:{url:anime.picture}, caption:animetxt},{quoted:m})
                 }
                 break
-case 'hentaivid': case 'hentaivideo': {
-	if (!m.isGroup) return XeonStickGroup()
+case 'hentaivid': case 'hentai': case 'hentaivideo': {
+	if (!m.isGroup) return XliconStickGroup()
 if (!AntiNsfw) return replygcXlicon(mess.nsfw)
                 await XliconStickWait()
                 const { hentai } = require('./lib/scraper.js')
@@ -5857,7 +5928,7 @@ if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcXlicon(mess.nsfw)
 await XliconStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)     
-            await XliconBotInc.sendMessage(m.chat, { caption:  `Here you go!`, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
+            await XliconBotInc.sendMessage(m.chat, { caption:  `➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�`, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -6483,6 +6554,7 @@ ${translatedChapterHindi.text}`
   }
   }
   break
+			
   case 'dalle': {
   if (!text) return replygcXlicon(`*This command generates images from text prompts*\n\n*𝙴xample usage*\n*${prefix + command} Beautiful anime girl*\n*${prefix + command} girl in pink dress*`)
   try {
@@ -6500,6 +6572,9 @@ ${translatedChapterHindi.text}`
   }
   }
   break
+
+
+			
   case 'translate':{
   	if (!q) return replygcXlicon(`*Where is the text*\n\n*𝙴xample usage*\n*${prefix + command} <language id> <text>*\n*${prefix + command} ja yo wassup*`)
   	const defaultLang = 'en'
@@ -6635,6 +6710,520 @@ case 'instagram': case 'igvideo': case 'igimage': case 'igvid': case 'igimg': {
   }
 }
 break
+case 'apk':
+case 'apkdl':{
+if (!text) return replygcXlicon("What apk u wanna download?")
+let resxeon = await fetch(`https://api.maher-zubair.tech/download/apk?id=${text}`)
+let jsonxeon = await resxeon.json()
+XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileName : jsonxeon.result.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
+.catch(console.error)
+}
+break
+           case 'mathsai': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/mathssolve?q=${text}`)                 
+                replygcXlicon(d.result)
+           }
+            break
+			
+            case 'blackboxai': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/blackboxv4?q=${text}`)                
+                replygcXlicon(d.result)
+           }
+            break
+            case 'bardai': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/bard?q=${text}`)                
+                replygcXlicon(d.result)
+           }
+            break
+            case 'photoleapai': {
+	if (!text) return replygcXlicon('What is your question?')
+	let xeonfetch = await fetchJson(`https://api.maher-zubair.tech/ai/photoleap?q${text}`)
+	XliconBotInc.sendMessage(from, { image: {url:xeonfetch.result}}, { quoted: m })
+	}
+	break
+	case 'lamaai': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/llama-2?q=${text}`)                
+                replygcXlicon(d.result)
+           }
+            break
+            case 'geminiai': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/gemini?q=${text}`)                
+                replygcXlicon(d.result)
+           }
+            break
+	    case 'chatgpt':  case 'gpt': {
+                if (!text) return replygcXlicon('What is your question?')
+                let d = await fetchJson(`https://api.maher-zubair.tech/ai/chatgptv4?q=${text}`)                
+                replygcXlicon(d.result)
+           }
+            break
+case 'itunes': {
+if (!text) return replygcXlicon('Please provide a song name')
+  try {
+    let res = await fetch(`https://api.popcat.xyz/itunes?q=${encodeURIComponent(text)}`)
+    if (!res.ok) {
+      throw new Error(`API request failed with status ${res.status}`)
+    }
+    let json = await res.json()
+    console.log('JSON response:', json)
+    let songInfo = 
+    `*Song Information:*\n
+     • *Name:* ${json.name}\n
+     • *Artist:* ${json.artist}\n
+     • *Album:* ${json.album}\n
+     • *Release Date:* ${json.release_date}\n
+     • *Price:* ${json.price}\n
+     • *Length:* ${json.length}\n
+     • *Genre:* ${json.genre}\n
+     • *URL:* ${json.url}`
+    // Check if thumbnail is present, then send it with songInfo as caption
+    if (json.thumbnail) {
+      await XliconBotInc.sendMessage(m.chat, {image: {url:json.thumbnail}, caption: songInfo}, {quoted: m})
+    } else {
+      replygcXlicon(songInfo)
+    }
+  } catch (error) {
+    console.error(error)
+    // Handle the error appropriately
+  }
+}
+break
+
+// ALL MAKER CMDS ADDED BY SALMAN SER
+// < For ttp >	
+			
+case 'ttp':
+if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+dgxeontks = args.join(" ")
+dgxeonvuff = await getBuffer(`https://api.maher-zubair.tech/maker/text2img?q=${dgxeontks}`)
+XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff, m, {
+                        packname: packname,
+                        author: author
+                    })
+break
+// < For attp >	
+			
+case 'attp':
+if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+dgxeontks2 = args.join(" ")
+dgxeonvuff2 = await getBuffer(`https://api.maher-zubair.tech/maker/text2gif?q=${dgxeontks2}`)
+XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff2, m, {
+                        packname: packname,
+                        author: author
+                    })
+break
+
+// ALL MAKER CMDS ADDED BY SALMAN SER			
+// < For blur >
+			
+               case 'blur':
+               case 'blurimg': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/blur?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+                break
+
+// < For beautiful >	
+			
+           case 'beautiful':
+           case 'beautifulimg': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/beautiful?url${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For facepalm >
+			
+            case 'facepalm':
+            case 'facepalmimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/facepalm?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For invert >
+			
+            case 'invert':
+            case 'invertimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/invert?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For pixelate >
+			
+            case 'pixelate':
+            case 'pixelateimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/pixelate?amount=50&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For rainbow >
+			
+            case 'rainbow':
+            case 'rainbowimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/rainbow?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For trigger >	
+			
+            case 'trigger':
+            case 'triggerimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://vihangayt.me/maker/trigger?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For wanted >	
+			
+            case 'wanted':
+            case 'wantedimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/trigger?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For wasted >
+			
+            case 'wasted':
+            case 'wastedimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/wasted?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For carbon >	
+			
+            case 'carbon':
+            case 'carbonimage': {
+ if (!text) return replygcXlicon('Where is the text?')
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://vihangayt.me/maker/carbonimg?q=${text}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For colorize >	
+			
+            case 'colorize': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://vihangayt.me/tools/colorize?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+             break
+
+// < For Burn >
+
+           case 'burn':
+           case 'burnimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/burn?amount=5&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For Sharpen >
+
+          case 'sharpen':
+          case 'sharpenimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/sharpen?amount=3&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+
+// < For Brightness >
+
+          case 'bright':
+          case 'brightimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/brightness?amount=50&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For darkness >
+
+          case 'dark':
+          case 'darkimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/darkness?amount=50&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For resize >
+
+          case 'resize':
+          case 'resizeimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/resize?height=500&width=500&url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+
+// < For delete>
+
+         case 'delete':
+         case 'deleteimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/delete?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+
+// < For jail>
+
+           case 'jail':
+           case 'jailimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/jail?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For joke>
+
+          case 'joke':
+          case 'jokeimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/jokeOverHead?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For hitler>
+
+          case 'hitler':
+          case 'hitlerimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/hitler?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For trash>
+
+         case 'trash':
+         case 'trashimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/trash?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For rip>
+
+          case 'rip':
+          case 'ripimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/rip?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For greyscale>
+
+          case 'greyscale':
+          case 'greyimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/greyscale?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For sepia>
+
+          case 'sepia':
+          case 'sepiaimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/sepia?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For shit>
+
+           case 'shit':
+           case 'shitimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/shit?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For circle>
+
+           case 'circle':
+           case 'circleimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/circle?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For reply>
+
+             case 'reply':
+             case 'replyimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/reply?image1=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For guildIcon>
+
+           case 'guildicon':
+           case 'guildimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/guildIcon?name=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For phub>
+
+           case 'phub':
+           case 'phubimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/phub?message=hiiiii&name=SalmanSer&image=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For quote>
+
+           case 'quote':
+           case 'quoteimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+		   
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/quote?message=hiiiii&name=SalmanSer&image=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For clyde>
+
+           case 'clyde':
+           case 'clydeimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/clyde?message=hiiiii&name=SalmanSer&image=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For opinion>
+
+           case 'opinion':
+           case 'opinionimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/opinion?message=hiiiii&name=SalmanSer&image=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For bed>
+
+            case 'bed':
+            case 'bedimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/bed?image1=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For kiss>
+
+           case 'kiss':
+           case 'kissimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/kiss?image1=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+
+// < For fuse>
+
+           case 'fuse':
+           case 'fuseimage': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api-smd-1.vercel.app/api/maker/fuse?image1=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break			
+
+// < For enhance >				
+             case 'enhance': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api.maher-zubair.tech/maker/enhance?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+
+// < For dehaze >			
+            case 'dehaze': {
+ if (!isMedia) return replygcXlicon("Where Is The Image")
+                let media = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
+                let anu = await TelegraPh(media)
+                XliconBotInc.sendMessage(m.chat, {
+                    image: { url: `https://api.maher-zubair.tech/maker/dehaze?url=${anu}` },caption: "➫ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑�" }, { quoted: m}) }
+            break
+           
   case 'totalfeature':
         case 'totalfitur': 
         case 'totalcmd': 
@@ -6703,6 +7292,7 @@ ${mot} 𝗗𝗮𝘁𝗲 : ${xdate}
 │➛ ${xprefix}ᴏᴡɴᴇʀᴍᴇɴᴜ
 │➛ ${xprefix}ᴘʜᴏᴛᴏᴏxʏᴍᴇɴᴜ
 │➛ ${xprefix}ᴇᴘʜᴏᴛᴏ360ᴍᴇɴᴜ
+│➛ ${xprefix}ᴍᴀᴋᴇʀᴍᴇɴᴜ
 │➛ ${xprefix}ᴀɴɪᴍᴇᴍᴇɴᴜ
 │➛ ${xprefix}ɴsғᴡᴍᴇɴᴜ
 │➛ ${xprefix}ʀᴀɴᴅᴏᴍᴘʜᴏᴛᴏᴍᴇɴᴜ
@@ -7995,7 +8585,118 @@ if (typemenu === 'v1') {
                 } else if (typemenu === 'v6') {
                     XliconBotInc.relayMessage(m.chat,  {
                        requestPaymentMessage: {
-                          currencyCodeIso4217: 'USD',
+                          currencyCodeIso4217: 'INR',
+                          amount1000: '9999999900',
+                          requestFrom: m.sender,
+                          noteMessage: {
+                             extendedTextMessage: {
+                                text: xmenu_oh,
+                                contextInfo: {
+                                   externalAdReply: {
+                                       showAdAttribution: true
+                                   }
+                                }
+                             }
+                          }
+                       }
+                    }, {})
+                } else if (typemenu === 'v7') {
+                    XliconBotInc.sendMessage(m.chat, {
+                        document: {
+                           url: 'https://i.ibb.co/2W0H9Jq/avatar-contact.png'
+                        },
+                        caption: xmenu_oh,
+                        mimetype: 'application/zip',
+                        fileName: ownername,
+                        fileLength: "99999999999",
+                        contextInfo: {
+                            externalAdReply: {
+                                showAdAttribution: true,
+                                title: botname,
+                                body: ownername,
+                                thumbnail: fs.readFileSync('./XliconMedia/theme/xliconpic.jpg'),
+                                sourceUrl: wagc,
+                                mediaType: 1,
+                                renderLargerThumbnail: true
+                            }
+                        }
+                    }, {
+                        quoted: fstatus 
+                    })
+                } else if (typemenu === 'v8') {
+                	XliconBotInc.sendMessage(m.chat, {
+      video: fs.readFileSync('./XliconMedia/theme/xliconvid3.mp4'),
+      gifPlayback: true,
+      caption: xmenu_oh,
+      contextInfo: {
+      externalAdReply: {
+      title: botname,
+      body: ownername,
+      thumbnailUrl: 'https://i.ibb.co/c8JJBZZ/peakpx-2.jpg',
+      sourceUrl: ``,
+      mediaType: 1,
+      renderLargerThumbnail: true
+      }
+      }
+      }, {
+                        quoted: m
+                    })
+                    }
+}
+break
+case 'makermenu': {
+let xmenu_oh = `Hi ${pushname}${readmore}\n\n${makermenu(prefix, hituet)}`
+if (typemenu === 'v1') {
+                    XliconBotInc.sendMessage(m.chat, {
+                        image: fs.readFileSync('./XliconMedia/theme/xliconpic.jpg'),
+                        caption: xmenu_oh
+                    }, {
+                        quoted: m
+                    })
+                } else if (typemenu === 'v2') {
+                    XliconBotInc.sendMessage(m.chat, {
+                        text: xmenu_oh,
+                        contextInfo: {
+                            externalAdReply: {
+                                showAdAttribution: true,
+                                title: botname,
+                                body: ownername,
+                                thumbnail: fs.readFileSync('./XliconMedia/theme/xliconpic.jpg'),
+                                sourceUrl: wagc,
+                                mediaType: 1,
+                                renderLargerThumbnail: true
+                            }
+                        }
+                    }, {
+                        quoted: m
+                    })
+                }   if (typemenu === 'v3') {
+                    XliconBotInc.sendMessage(m.chat, {
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid.mp4'),
+                        caption: xmenu_oh
+                    }, {
+                        quoted: m
+                    })
+                } else if (typemenu === 'v4') {
+                    XliconBotInc.sendMessage(m.chat, {
+                        video: fs.readFileSync('./XliconMedia/theme/xliconvid2.mp4'),
+                        caption: xmenu_oh,
+                        gifPlayback: true
+                    }, {
+                        quoted: m
+                    })
+                } else if (typemenu === 'v5') {
+                    XliconBotInc.relayMessage(m.chat, {
+                        scheduledCallCreationMessage: {
+                            callType: "AUDIO",
+                            scheduledTimestampMs: 1200,
+                            title: xmenu_oh
+                        }
+                    }, {})
+                } else if (typemenu === 'v6') {
+                    XliconBotInc.relayMessage(m.chat,  {
+                       requestPaymentMessage: {
+                          currencyCodeIso4217: 'INR',
                           amount1000: '9999999900',
                           requestFrom: m.sender,
                           noteMessage: {
