@@ -4342,10 +4342,13 @@ await XliconBotInc.sendMessage(m.chat,{
 }
 break
 case 'git': case 'gitclone':
-if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`)
-if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcXlicon(`Link invalid!!`)
-let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-    let [, user, repo] = args[0].match(regex1) || []
+    if (!args[0]) return replygcXlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`)
+    if (!isUrl(args[0]))  return replygcXlicon('Link invalid! Please provide a valid URL.') 
+    let regex1 = /(?:https|git)(?::\/\/|@)(www\.)?github\.com[\/:]([^\/:]+)\/(.+)/i
+    let [, , user, repo] = args[0].match(regex1) || [];
+    if (!repo) {
+        return replygcXlicon('Invalid GitHub link format. Please double-check the provided link.')
+    }
     repo = repo.replace(/.git$/, '')
     let url = `https://api.github.com/repos/${user}/${repo}/zipball`
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
