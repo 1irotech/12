@@ -5282,7 +5282,8 @@ mentionedJid:[xeonshimts],
      break
      case 'say': case 'tts': case 'gtts':{
 if (!text) return replygcXlicon('Where is the text?')
-            let texttts = text
+            //Limit text to maximum supported 200 characters!
+            let texttts = text.substring(0, 200);
             const xeonrl = googleTTS.getAudioUrl(texttts, {
                 lang: "en",
                 slow: false,
