@@ -6717,27 +6717,42 @@ case 'apkdl':{
 if (!text) return replygcXlicon("What apk u wanna download?")
 let resxeon = await fetch(`https://api.maher-zubair.tech/download/apk?id=${text}`)
 let jsonxeon = await resxeon.json()
-XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileName : jsonxeon.result.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
-.catch(console.error)
+    if(jsonxeon.status=="200"){
+        XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileName : jsonxeon.result.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
+    }else{
+        return replygcXlicon(jsonxeon.err)
+    }
 }
 break
            case 'mathsai': case 'mathai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/mathssolve?q=${text}`)                 
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 			
             case 'blackboxai': case 'bbai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/blackboxv4?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
             case 'bardai': case 'bard': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/bard?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
             case 'photoleapai': {
@@ -6749,13 +6764,21 @@ break
 	case 'lamaai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/llama-2?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
             case 'geminiai': case 'gemini': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/gemini?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 	    case 'chatgpt':  case 'gpt': {
