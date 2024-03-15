@@ -6761,7 +6761,11 @@ break
 	    case 'chatgpt':  case 'gpt': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/chatgptv4?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 case 'itunes': {
