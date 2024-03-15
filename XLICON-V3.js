@@ -6745,7 +6745,7 @@ break
             break
             case 'photoleapai': {
 	if (!text) return replygcXlicon('What is your question?')
-	let xeonfetch = await fetchJson(`https://api.maher-zubair.tech/ai/photoleap?q${text}`)
+	let xeonfetch = await fetchJson(`https://api.maher-zubair.tech/ai/photoleap?q=${text}`)
 	XliconBotInc.sendMessage(from, { image: {url:xeonfetch.result}}, { quoted: m })
 	}
 	break
