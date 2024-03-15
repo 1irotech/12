@@ -6827,7 +6827,8 @@ break
 // < For ttp >	
 			
 case 'ttp':
-if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+    case 'textsticker':
+if (args.length == 0) return replygcXlicon(`Example: ${prefix + command} SalmanSer`)
 dgxeontks = args.join(" ")
 dgxeonvuff = await getBuffer(`https://api.maher-zubair.tech/maker/text2img?q=${dgxeontks}`)
 XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff, m, {
@@ -6838,7 +6839,8 @@ break
 // < For attp >	
 			
 case 'attp':
-if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+    case 'textgif':
+if (args.length == 0) return replygcXlicon(`Example: ${prefix + command} SalmanSer`)
 dgxeontks2 = args.join(" ")
 dgxeonvuff2 = await getBuffer(`https://api.maher-zubair.tech/maker/text2gif?q=${dgxeontks2}`)
 XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff2, m, {
