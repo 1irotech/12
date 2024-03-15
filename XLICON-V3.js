@@ -5243,16 +5243,13 @@ break
 case 'lyrics': {
 if (!text) return replygcXlicon(`What lyrics you looking for?\nExample usage: ${prefix}lyrics Thunder`)
 await XliconStickWait()
-const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
-const result = await lyricsv2(text).catch(async _ => await lyrics(text))
-replygcXlicon(`
-*Title :* ${result.title}
-*Author :* ${result.author}
-*Url :* ${result.link}
-
-*Lyrics :* ${result.lyrics}
-
-`.trim())
+let lyric = await fetch(`https://api.maher-zubair.tech/search/lyrics?q=${text}`)
+let jsonxeon = await lyric.json()
+if (jsonxeon.result.error) {
+replygcXlicon('Lyrics not found.')
+} else {
+replygcXlicon(`*Artist*: ${jsonxeon.result.artist}\n*Lyrics*:\n${jsonxeon.result.lyrics}`)
+}
 }
 break
 case 'pick': {
