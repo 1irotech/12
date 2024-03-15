@@ -4471,7 +4471,7 @@ const fg = require('api-dylux')
 └────────────`
      await XliconBotInc.sendMessage(m.chat, {image: { url: res.profilePic }, caption: te }, {quoted: m})
       } catch {
-        replygcXlicon(`Make sure the username comes from *Instagram*`)
+        replygcXlicon(`Couldn't find this user on *Instagram* or profile is *Private*.`)
       }
 }
 break
@@ -6690,7 +6690,7 @@ ${listAdmin}
     XliconBotInc.sendMessage(m.chat, {text : text, mentions: [...groupAdmins.map(v => v.id), owner] }, {quoted: m})
 }
 break
-case 'instagram': case 'igvideo': case 'igimage': case 'igvid': case 'igimg': {
+case 'instagram': case 'igvideo': case 'igimage': case 'igvid': case 'igimg': case 'ig': {
 	  if (!text) return replygcXlicon(`You need to give the URL of Any Instagram video, post, reel, image`)
   let res
   try {
@@ -7761,7 +7761,8 @@ if (typemenu === 'v1') {
                     }
 }
 break
-case 'downloadmenu': {
+case 'downloadmenu':
+    case 'dlmenu': {
 let xmenu_oh = `Hi ${pushname}${readmore}\n\n${downloadmenu(prefix, hituet)}`
 if (typemenu === 'v1') {
                     XliconBotInc.sendMessage(m.chat, {
@@ -8538,7 +8539,8 @@ if (typemenu === 'v1') {
                     }
 }
 break
-case 'ephoto360menu': {
+case 'ephoto360menu':
+    case 'ephotomenu': {
 let xmenu_oh = `Hi ${pushname}${readmore}\n\n${ephoto360menu(prefix, hituet)}`
 if (typemenu === 'v1') {
                     XliconBotInc.sendMessage(m.chat, {
