@@ -6724,20 +6724,20 @@ XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileN
 .catch(console.error)
 }
 break
-           case 'mathsai': {
+           case 'mathsai': case 'mathai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/mathssolve?q=${text}`)                 
                 replygcXlicon(d.result)
            }
             break
 			
-            case 'blackboxai': {
+            case 'blackboxai': case 'bbai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/blackboxv4?q=${text}`)                
                 replygcXlicon(d.result)
            }
             break
-            case 'bardai': {
+            case 'bardai': case 'bard': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/bard?q=${text}`)                
                 replygcXlicon(d.result)
@@ -6755,7 +6755,7 @@ break
                 replygcXlicon(d.result)
            }
             break
-            case 'geminiai': {
+            case 'geminiai': case 'gemini': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/gemini?q=${text}`)                
                 replygcXlicon(d.result)
