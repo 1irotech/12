@@ -1,7 +1,7 @@
 
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //                                                                                                      //
-//                                 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑-𝐌𝐃    𝐁𝐎𝐓                                                //
+//                                 USAIMKHAN   𝐁𝐎𝐓                                                //
 //                                                                                                      // 
 //                                         Ｖ：3.0                                                      // 
 //                                                                                                      // 
@@ -16,10 +16,10 @@
 //                                                                                                      //
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //*
- //  * @project_name : XLICON-V3-MD
- //  * @author : salmanytofficial
+ //  * @project_name : USAIMKHAN
+ //  * @author : USAIMKHAN 
  //  * @youtube : https://www.youtube.com/@s4salmanyt
-//   * @description : XLICON-V3 ,A Multi-functional whatsapp user bot.
+//   * @description : USAIMKHAN,A Multi-functional whatsapp user bot.
 //*
 //* 
 //base by DGXeon
@@ -27,11 +27,11 @@
 //Instagram: unicorn_xeon13
 //Telegram: t.me/ahmmitech
 //GitHub: @salmanytofficial
-//WhatsApp: +923184070915
+//WhatsApp: +923068284384
 //want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
 //   * Created By Github: DGXeon.
 //   * Credit To Xeon
-//   * © 2024 XLICON-V3-MD.
+//   * © 2024 USAIMKHAN.
 // ⛥┌┤
 // */
 
@@ -41,7 +41,7 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 //owmner v card
 //________________________________________________________________________________________________________
-global.ytname = process.env.YT_NAME || "YT: S4 Salman YT" //ur yt chanel name
+global.ytname = process.env.YT_NAME || "YT: USAIMKHAN" //ur yt chanel name
 //________________________________________________________________________________________________________
 global.socialm = process.env.MEDIA || "GitHub: salmanytofficial" //ur github or insta name
 //________________________________________________________________________________________________________
@@ -50,11 +50,11 @@ global.location = process.env.GL_INFO || "Pakistan, Lahore, Sabzazar" //ur locat
 
 //new
 //________________________________________________________________________________________________________
-global.botname = process.env.BOT_NAME || 'XLICON-V3-MD' //ur bot name
+global.botname = process.env.BOT_NAME || 'USAIMKHAN' //ur bot name
 //________________________________________________________________________________________________________
-global.ownernumber = process.env.SUDO || '923184070915' //ur owner number
+global.ownernumber = process.env.SUDO || '923068284384' //ur owner number
 //________________________________________________________________________________________________________
-global.ownername = process.env.SUDO_NAME || 'Salman Ahmad' //ur owner name
+global.ownername = process.env.SUDO_NAME || 'USAIMKHAN' //ur owner name
 //________________________________________________________________________________________________________
 global.websitex = process.env.YT_LINK || "https://youtube.com/@s4salmanyt"
 //________________________________________________________________________________________________________
@@ -66,15 +66,15 @@ global.wm = process.env.GL_WM || "© Xʟɪᴄᴏɴ-Iɴᴄ"
 //________________________________________________________________________________________________________
 global.botscript = process.env.GL_SC || 'https://github.com/salmanytofficial/XLICON-V3-MD' //script link
 //________________________________________________________________________________________________________
-global.packname = process.env.PACK_NAME || "𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑"
+global.packname = process.env.PACK_NAME || "USAIMKHAN"
 //________________________________________________________________________________________________________
-global.author = process.env.AUTHER_NAME || "ᗰᗩᗪE ᗷY 𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿"
+global.author = process.env.AUTHER_NAME || "ᗰᗩᗪE ᗷY USAIMKHAN"
 //________________________________________________________________________________________________________
-global.creator = process.env.GL_DEVS || "923184070915@s.whatsapp.net"
+global.creator = process.env.GL_DEVS || "923068284384@s.whatsapp.net"
 //________________________________________________________________________________________________________
 global.xprefix = process.env.PREFIX || '.'
 //________________________________________________________________________________________________________
-global.premium = process.env.GL_VIP || ["923184070915"] // Premium User
+global.premium = process.env.GL_VIP || ["923068284384,923200611652"] // Premium User
 //________________________________________________________________________________________________________
 global.hituet = 0
 //________________________________________________________________________________________________________
@@ -95,27 +95,4 @@ global.anticall = process.env.GL_NOCALL || false //bot blocks user when called
 //________________________________________________________________________________________________________
 global.autoswview = process.env.AUTO_STATUS_SEEN || true //auto status/story view
 //________________________________________________________________________________________________________
-global.adminevent = process.env.ANNOUNCE_MSG  || true //show promote/demote message
-//________________________________________________________________________________________________________
-global.groupevent = process.env.GROUP_ANNOUNCE_MSG || true //show update messages in group chat
-//________________________________________________________________________________________________________
 
-
-//msg
-global.mess = {
-	limit: '_*Your limit is up!*_',
-	nsfw: '_*Nsfw is disabled in this group, Please tell the admin to enable*_',
-    done: '_*Done ✓*_',
-    error: '_*I am having error to execute this*_',
-    success: '_*Here you go!*_'
-}
-//thumbnail
-global.thumb = fs.readFileSync('./XliconMedia/theme/xliconpic.jpg')
-
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-    fs.unwatchFile(file)
-    console.log(chalk.redBright(`Update'${__filename}'`))
-    delete require.cache[file]
-    require(file)
-})
