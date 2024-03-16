@@ -626,7 +626,7 @@ return build_server + data.image
 
 //bug loading
 async function loading () {
-var xeonlod = [
+var ᵣₒₘₑₖ-bₒₜ ₗₒₐdᵢₙg = [
 "```■■□□□□□□□ 10%```",
 "```■■■■□□□□□ 30%```",
 "```■■■■■■□□□ 50%```",
@@ -742,7 +742,7 @@ async function styletext(teks) {
         }
         //auto set bio\\
 	if (db.data.settings[botNumber].autobio) {
-            XliconBotInc.updateProfileStatus(`${botname} 📃 𝐇𝐚𝐯𝐞 𝐁𝐞𝐞𝐧 𝐑𝐮𝐧𝐧𝐢𝐧𝐠 💻 ${runtime(process.uptime())}...                                   ~𝐒𝐓𝐀𝐑 ⭐ 𝐓𝐡𝐞 𝐁𝐨𝐭 𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐎𝐧 𝐆𝐢𝐭𝐇𝐮𝐛...                       🏮 © Xʟɪᴄᴏɴ-Iɴᴄ
+            XliconBotInc.updateProfileStatus(`${botname} ★☆••[𝐒𝐦𝐢𝐥𝐞 𝐢𝐬 𝐭𝐡𝐞 𝐛𝐞𝐬𝐭 𝐦𝐚𝐝𝐢𝐜𝐢𝐧𝐞 𝐟𝐨𝐫 𝐚𝐧𝐲 𝐩𝐫𝐨𝐛𝐥𝐞𝐦😊𝐒𝐨 𝐤𝐞𝐞𝐩 𝐬𝐦𝐢𝐥𝐞].())}...                                   ~...                       🏮 © 𝑅𝚯𝚳𝚵𝐊-𝚾𝐃-𝚩𝚯𝚻
      `).catch(_ => _)
 	}
      //auto type record
