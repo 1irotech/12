@@ -4471,7 +4471,7 @@ const fg = require('api-dylux')
 └────────────`
      await XliconBotInc.sendMessage(m.chat, {image: { url: res.profilePic }, caption: te }, {quoted: m})
       } catch {
-        replygcXlicon(`Make sure the username comes from *Instagram*`)
+        replygcXlicon(`Couldn't find this user on *Instagram* or profile is *Private*.`)
       }
 }
 break
@@ -5243,16 +5243,13 @@ break
 case 'lyrics': {
 if (!text) return replygcXlicon(`What lyrics you looking for?\nExample usage: ${prefix}lyrics Thunder`)
 await XliconStickWait()
-const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
-const result = await lyricsv2(text).catch(async _ => await lyrics(text))
-replygcXlicon(`
-*Title :* ${result.title}
-*Author :* ${result.author}
-*Url :* ${result.link}
-
-*Lyrics :* ${result.lyrics}
-
-`.trim())
+let lyric = await fetch(`https://api.maher-zubair.tech/search/lyrics?q=${text}`)
+let jsonxeon = await lyric.json()
+if (jsonxeon.result.error) {
+replygcXlicon('Lyrics not found.')
+} else {
+replygcXlicon(`*Artist*: ${jsonxeon.result.artist}\n*Lyrics*:\n${jsonxeon.result.lyrics}`)
+}
 }
 break
 case 'pick': {
@@ -6690,7 +6687,7 @@ ${listAdmin}
     XliconBotInc.sendMessage(m.chat, {text : text, mentions: [...groupAdmins.map(v => v.id), owner] }, {quoted: m})
 }
 break
-case 'instagram': case 'igvideo': case 'igimage': case 'igvid': case 'igimg': {
+case 'instagram': case 'igvideo': case 'igimage': case 'igvid': case 'igimg': case 'ig': {
 	  if (!text) return replygcXlicon(`You need to give the URL of Any Instagram video, post, reel, image`)
   let res
   try {
@@ -6720,51 +6717,78 @@ case 'apkdl':{
 if (!text) return replygcXlicon("What apk u wanna download?")
 let resxeon = await fetch(`https://api.maher-zubair.tech/download/apk?id=${text}`)
 let jsonxeon = await resxeon.json()
-XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileName : jsonxeon.result.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
-.catch(console.error)
+    if(jsonxeon.status=="200"){
+        XliconBotInc.sendMessage(from, { document: { url: jsonxeon.result.dllink}, fileName : jsonxeon.result.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
+    }else{
+        return replygcXlicon(jsonxeon.err)
+    }
 }
 break
-           case 'mathsai': {
+           case 'mathsai': case 'mathai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/mathssolve?q=${text}`)                 
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 			
-            case 'blackboxai': {
+            case 'blackboxai': case 'bbai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/blackboxv4?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
-            case 'bardai': {
+            case 'bardai': case 'bard': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/bard?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
             case 'photoleapai': {
 	if (!text) return replygcXlicon('What is your question?')
-	let xeonfetch = await fetchJson(`https://api.maher-zubair.tech/ai/photoleap?q${text}`)
+	let xeonfetch = await fetchJson(`https://api.maher-zubair.tech/ai/photoleap?q=${text}`)
 	XliconBotInc.sendMessage(from, { image: {url:xeonfetch.result}}, { quoted: m })
 	}
 	break
 	case 'lamaai': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/llama-2?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
-            case 'geminiai': {
+            case 'geminiai': case 'gemini': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/gemini?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 	    case 'chatgpt':  case 'gpt': {
                 if (!text) return replygcXlicon('What is your question?')
                 let d = await fetchJson(`https://api.maher-zubair.tech/ai/chatgptv4?q=${text}`)                
-                replygcXlicon(d.result)
+                if(!d.result){
+                    return replygcXlicon("Failed to get response. Please try again later")
+                }else{
+                    replygcXlicon(d.result)
+                }
            }
             break
 case 'itunes': {
@@ -6803,7 +6827,8 @@ break
 // < For ttp >	
 			
 case 'ttp':
-if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+    case 'textsticker':
+if (args.length == 0) return replygcXlicon(`Example: ${prefix + command} SalmanSer`)
 dgxeontks = args.join(" ")
 dgxeonvuff = await getBuffer(`https://api.maher-zubair.tech/maker/text2img?q=${dgxeontks}`)
 XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff, m, {
@@ -6814,7 +6839,8 @@ break
 // < For attp >	
 			
 case 'attp':
-if (args.length == 0) return reply(`Example: ${prefix + command} SalmanSer`)
+    case 'textgif':
+if (args.length == 0) return replygcXlicon(`Example: ${prefix + command} SalmanSer`)
 dgxeontks2 = args.join(" ")
 dgxeonvuff2 = await getBuffer(`https://api.maher-zubair.tech/maker/text2gif?q=${dgxeontks2}`)
 XliconBotInc.sendImageAsSticker(m.chat, dgxeonvuff2, m, {
@@ -7761,7 +7787,8 @@ if (typemenu === 'v1') {
                     }
 }
 break
-case 'downloadmenu': {
+case 'downloadmenu':
+    case 'dlmenu': {
 let xmenu_oh = `Hi ${pushname}${readmore}\n\n${downloadmenu(prefix, hituet)}`
 if (typemenu === 'v1') {
                     XliconBotInc.sendMessage(m.chat, {
@@ -8538,7 +8565,8 @@ if (typemenu === 'v1') {
                     }
 }
 break
-case 'ephoto360menu': {
+case 'ephoto360menu':
+    case 'ephotomenu': {
 let xmenu_oh = `Hi ${pushname}${readmore}\n\n${ephoto360menu(prefix, hituet)}`
 if (typemenu === 'v1') {
                     XliconBotInc.sendMessage(m.chat, {
