@@ -17622,16 +17622,6 @@ ${mot} 𝗗𝗮𝘁𝗲 : ${xdate}
     }
   } catch (err) {
     console.log(util.format(err));
-    let e = String(err);
-    XliconBotInc.sendMessage("923264476886@s.whatsapp.net", {
-      text:
-        "Hello SalmanSer, there seems to be an error, please fix it " +
-        util.format(e),
-      contextInfo: {
-        forwardingScore: 9999999,
-        isForwarded: true,
-      },
-    });
     if (e.includes("conflict")) return;
     if (e.includes("not-authorized")) return;
     if (e.includes("already-exists")) return;
