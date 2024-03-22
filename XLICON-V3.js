@@ -176,23 +176,23 @@ let vote = (db.data.others.vote = []);
 let kuismath = (db.data.game.math = []);
 //afk function
 function formatAfkDuration(ms) {
-    let seconds = Math.floor(ms / 1000);
-    let minutes = Math.floor(seconds / 60);
-    let hours = Math.floor(minutes / 60);
-    let days = Math.floor(hours / 24);
+  let seconds = Math.floor(ms / 1000);
+  let minutes = Math.floor(seconds / 60);
+  let hours = Math.floor(minutes / 60);
+  let days = Math.floor(hours / 24);
 
-    seconds %= 60;
-    minutes %= 60;
-    hours %= 24;
+  seconds %= 60;
+  minutes %= 60;
+  hours %= 24;
 
-    let parts = [];
-    if (days) parts.push(days + " days");
-    if (hours) parts.push(hours + " hours");
-    if (minutes) parts.push(minutes + " minutes");
-    if (seconds) parts.push(seconds + " seconds");
+  let parts = [];
+  if (days) parts.push(days + " days");
+  if (hours) parts.push(hours + " hours");
+  if (minutes) parts.push(minutes + " minutes");
+  if (seconds) parts.push(seconds + " seconds");
 
-    return parts.join(", ");
-  }
+  return parts.join(", ");
+}
 //time
 const xtime = moment.tz("Asia/Karachi").format("HH:mm:ss");
 const xdate = moment.tz("Asia/Karachi").format("DD/MM/YYYY");
@@ -1482,28 +1482,28 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
       ]),
     ];
     for (let jid of mentionUser) {
-        let user = db.data.users[jid];
-        if (!user) continue;
-        let afkTime = user.afkTime;
-        let nick = user.nick;
-        if (!afkTime || afkTime < 0) continue;
-        let afkDuration = formatAfkDuration(new Date() - user.afkTime);
-        let reason = user.afkReason || "";
-        replygcXlicon(
-          `Don't Mention.. *${nick}* is currently AFK ${
-            reason ? "for: " + reason : reason
-          }\nAFK Since \`${afkDuration}\``
-        );
-      }
-      if (db.data.users[m.sender].afkTime > -1) {
-        let user = global.db.data.users[m.sender];
-        let afkDuration = formatAfkDuration(new Date() - user.afkTime);
-  
-        replygcXlicon(`Welcome back...\nYou were away for: \`${afkDuration}\``);
-  
-        user.afkTime = -1;
-        user.afkReason = "";
-      }
+      let user = db.data.users[jid];
+      if (!user) continue;
+      let afkTime = user.afkTime;
+      let nick = user.nick;
+      if (!afkTime || afkTime < 0) continue;
+      let afkDuration = formatAfkDuration(new Date() - user.afkTime);
+      let reason = user.afkReason || "";
+      replygcXlicon(
+        `Don't Mention.. *${nick}* is currently AFK ${
+          reason ? "for: " + reason : reason
+        }\nAFK Since \`${afkDuration}\``
+      );
+    }
+    if (db.data.users[m.sender].afkTime > -1) {
+      let user = global.db.data.users[m.sender];
+      let afkDuration = formatAfkDuration(new Date() - user.afkTime);
+
+      replygcXlicon(`Welcome back...\nYou were away for: \`${afkDuration}\``);
+
+      user.afkTime = -1;
+      user.afkReason = "";
+    }
 
     //total features
     const Xliconfeature = () => {
@@ -6774,13 +6774,11 @@ ${meg.result}`);
           { quoted: m }
         ).catch((err) => replygcXlicon(mess.error));
         break;
-        case "tiktok":
+      case "tiktok":
       case "tiktokvideo":
         {
           if (!args[0])
-            return replygcXlicon(
-              `Correct Usage: \`${command} <Tiktok Video URL>\``
-            );
+            return replygcXlicon(`Example : ${prefix + command} link`);
           await XliconStickWait();
           let resxeon = await fetch(
             `https://api.maher-zubair.tech/download/tiktok2?url=${args[0]}`
@@ -6806,17 +6804,26 @@ ${meg.result}`);
         {
           if (!q) return replygcXlicon(`Example : ${prefix + command} link`);
           if (!q.includes("tiktok")) return replygcXlicon(`Link Invalid!!`);
-          require("./lib/tiktok")
-            .Tiktok(q)
-            .then((data) => {
-              const xeontikmp3 = { url: data.audio };
-              XliconBotInc.sendMessage(
-                m.chat,
-                { audio: xeontikmp3, mimetype: "audio/mp4", ptt: true },
-                { quoted: m }
-              );
-            });
+          await XliconStickWait();
+          let resxeon = await fetch(
+            `https://api.maher-zubair.tech/download/tiktok2?url=${q}`
+          );
+          let jsonxeon = await resxeon.json();
+          if (jsonxeon.status == "200" && jsonxeon.result.url.nowm) {
+            XliconBotInc.sendMessage(
+              from,
+              {
+                audio: { url: jsonxeon.result.url.audio },
+                fileName: "tiktokaudio.mp3",
+                mimetype: "video/mp4",
+              },
+              { quoted: m }
+            );
+          } else {
+            return replygcXlicon("Failed to get audio. Try after a while...");
+          }
         }
+
         break;
       case "google":
         {
@@ -6902,24 +6909,33 @@ ${themeemoji} Title: ${result.title}`;
       case "tiktokstalk":
         {
           if (!text) return replygcXlicon(`Username? `);
-          let res = await fg.ttStalk(args[0]);
+          let res = await fetchJson(
+            `https://api.maher-zubair.tech/stalk/tiktok?q=${text}`
+          );
           let txt = `
 ┌──「 *TIKTOK STALK* 
 ──「 *TIKTOK STALK* 
-▢ *🔖Number:* ${res.name}
-▢ *🔖Username:* ${res.username}
-▢ *👥followers:* ${res.followers}
-▢ *🫂following:* ${res.following}
-▢ *📌Desc:* ${res.desc}
-
-▢ *🔗 Link* : https://tiktok.com/${res.username}
+▢ *🔖 Name:* ${res.result.name}
+▢ *🔖 Username:* ${res.result.username}
+▢ *👥 Followers:* ${res.result.followers}
+▢ *🫂 Following:* ${res.result.following}
+▢ *🩷 Likes:* ${res.result.likes}
+▢ *📌 Bio:* ${res.result.bio}
+▢ *🔗 Link* : https://tiktok.com/${res.result.username}
 └────────────`;
-          await XliconBotInc.sendMessage(
-            m.chat,
-            { image: { url: res.profile }, caption: txt },
-            { quoted: m }
-          );
+          if (res.status == "200") {
+            XliconBotInc.sendMessage(
+              m.chat,
+              { image: { url: res.result.profile }, caption: txt },
+              { quoted: m }
+            );
+          } else {
+            return replygcXlicon(
+              "Either the profile is private or doesn't exist..."
+            );
+          }
         }
+
         break;
       case "igstalk":
         {
