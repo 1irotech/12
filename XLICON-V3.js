@@ -951,7 +951,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
     function getRandomNumber(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min; 
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     async function styletext(teks) {
       return new Promise((resolve, reject) => {
@@ -6303,6 +6303,43 @@ ${themeemoji} Title: ${result.title}`;
           }
         }
         break;
+      case "ytstalk":
+        {
+          if (!text) return replygcXlicon(`Channel Name?`);
+          let res = await fetchJson(
+            `https://api.maher-zubair.tech/stalk/ytchannel?q=${text}`
+          );
+          const dateString = res.result[0].channel_created;
+          const date = new Date(dateString);
+
+          const options = {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          };
+
+          const formattedDate = date.toLocaleDateString("en-US", options);
+          let txt = `
+┌──「 *YOUTUBE STALK* 
+▢ *Channel Name:* ${res.result[0].channel_name}
+▢ *Channel Created:* ${formattedDate}
+▢ *ABOUT:* ${res.result[0].channel_about || "None"}
+└────────────`;
+          if (res.status == "200") {
+            XliconBotInc.sendMessage(
+              m.chat,
+              {
+                image: { url: res.result[0].channel_picture.high.url },
+                caption: txt,
+              },
+              { quoted: m }
+            );
+          } else {
+            return replygcXlicon("No such channel exists...");
+          }
+        }
+
+        break;
       case "tiktokstalk":
         {
           if (!text) return replygcXlicon(`Username? `);
@@ -7314,7 +7351,7 @@ ID Zone: ${q.split("|")[1]}`);
         {
           if (!text)
             return replygcXlicon(`Example : ${prefix + command} my profile`);
-          let kah = getRandomNumber(0,100)
+          let kah = getRandomNumber(0, 100);
           let jawab = `*Rate ${text}*\nAnswer : ${kah}%`;
           await replygcXlicon(jawab);
         }
@@ -9470,8 +9507,7 @@ Cieeee, What's Going On❤️💖👀`,
           "Top",
           "Helpful",
         ];
-        
-        
+
         var sipat = sifat[Math.floor(Math.random() * sifat.length)];
         var biho = hoby[Math.floor(Math.random() * hoby.length)];
         var bhucin = getRandomNumber(0, 100);
@@ -9512,7 +9548,7 @@ Cieeee, What's Going On❤️💖👀`,
           { quoted: m }
         );
         break;
-        
+
       case "charactercheck":
         if (!text)
           return replygcXlicon(
@@ -9539,7 +9575,7 @@ Cieeee, What's Going On❤️💖👀`,
           { quoted: m }
         );
         break;
-        case "stupidcheck":
+      case "stupidcheck":
       case "uncleancheck":
       case "hotcheck":
       case "smartcheck":
@@ -9547,7 +9583,7 @@ Cieeee, What's Going On❤️💖👀`,
       case "dogcheck":
       case "coolcheck":
       case "waifucheck":
-        case "handsomecheck":
+      case "handsomecheck":
       case "beautifulcheck":
       case "awesomecheck":
       case "greatcheck":
@@ -9560,7 +9596,7 @@ Cieeee, What's Going On❤️💖👀`,
       case "uglycheck":
         if (!m.isGroup) return XeonStickGroup();
         const cex = body.slice(0);
-        const cek2 = getRandomNumber(0,100)
+        const cek2 = getRandomNumber(0, 100);
         if (mentionByReply) {
           XliconBotInc.sendMessage(
             from,
