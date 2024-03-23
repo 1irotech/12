@@ -6303,6 +6303,7 @@ ${themeemoji} Title: ${result.title}`;
           }
         }
         break;
+        
       case "ytstalk":
         {
           if (!text) return replygcXlicon(`Channel Name?`);
@@ -6486,6 +6487,42 @@ Nickname : ${eeh.nickname}`);
 Username : ${dat.userName}
 Id : ${q.split("|")[0]}
 ID Zone: ${q.split("|")[1]}`);
+        }
+        break;
+        case "disguise":
+      case "fakeinfo":
+        {
+          let res = await fetchJson(
+            `https://api.maher-zubair.tech/misc/fakeinfo`
+          );
+          let txt = `*FAKE INFO*
+ *Name*: ${res.result.results[0].name.title} ${res.result.results[0].name.first} ${res.result.results[0].name.last}
+ *Phone No*: ${res.result.results[0].cell}
+ *Date of Birth*: ${res.result.results[0].dob.date} 
+ *Age*: ${res.result.results[0].dob.age} 
+ *Gender*: ${res.result.results[0].gender}
+ *Address*: ${res.result.results[0].location.street}, ${res.result.results[0].location.state}
+ *Postal Code*: ${res.result.results[0].location.postcode}
+ *Email*: ${res.result.results[0].email}
+ *LOGINS*
+ *UUID*: ${res.result.results[0].login.uuid}
+ *Username*: ${res.result.results[0].login.username}
+ *Passowrd*: ${res.result.results[0].login.password}
+ *Md5*: ${res.result.results[0].login.md5}
+ *SHA1*: ${res.result.results[0].login.sha1}
+ *SHA256*: ${res.result.results[0].login.sha256}`;
+          if (res.status == "200") {
+            XliconBotInc.sendMessage(
+              m.chat,
+              {
+                image: { url: res.result.results[0].picture.large },
+                caption: txt,
+              },
+              { quoted: m }
+            );
+          } else {
+            return replygcXlicon("Failed to generate information...");
+          }
         }
         break;
       case "spotify":
