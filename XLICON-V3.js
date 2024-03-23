@@ -11302,7 +11302,44 @@ ${listAdmin}
           });
         }
         break;
+      //cricket
+      case "matches":
+      case "match":
+      case "cricket":
+        {
+          let res = await fetchJson(`https://api-smd-1.vercel.app/api/match`);
+          const matches = res.results;
+          console.log(matches);
 
+          let outputMessage = ""; // Initialize the output message
+          matches.forEach((match) => {
+            // Change 'matches' to 'match'
+            outputMessage += `* ${match.title}\n`;
+            outputMessage += `* URL: ${match.link}\n`;
+          });
+          replygcXlicon(
+            `${outputMessage}\n\nType *${prefix}score cricbuzz link* to get detailed result...`
+          );
+        }
+        break;
+      case "scores":
+      case "score":
+        {
+          if (!args[0]) {
+            return replygcXlicon(
+              `Cricbuzz match Link is required. Type *${prefix}matches* to get links...`
+            );
+          }
+          let res = await fetchJson(
+            `https://api-smd-1.vercel.app/api/score?url=${args[0]}`
+          );
+          if (res.error) {
+            ("No Data Found or Invalid URL...");
+          }
+          let txt = `*${res.results.names}*\n\n${res.results.details[0]}\n${res.results.details[1]}\n${res.results.details[2]}\n\n*Summary*: ${res.results.preview}`;
+          replygcXlicon(txt);
+        }
+        break;
       // < For quote>
 
       case "quote":
