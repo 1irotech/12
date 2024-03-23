@@ -948,7 +948,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
       });
     }
     //random number
-    function getRandom(min, max) {
+    function getRandomNumber(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -7314,7 +7314,7 @@ ID Zone: ${q.split("|")[1]}`);
         {
           if (!text)
             return replygcXlicon(`Example : ${prefix + command} my profile`);
-          let kah = getRandom(0,100)
+          let kah = getRandomNumber(0,100)
           let jawab = `*Rate ${text}*\nAnswer : ${kah}%`;
           await replygcXlicon(jawab);
         }
@@ -9474,15 +9474,15 @@ Cieeee, What's Going On❤️💖👀`,
         
         var sipat = sifat[Math.floor(Math.random() * sifat.length)];
         var biho = hoby[Math.floor(Math.random() * hoby.length)];
-        var bhucin = getRandom(0, 100);
-        var senga = getRandom(0, 100);
+        var bhucin = getRandomNumber(0, 100);
+        var senga = getRandomNumber(0, 100);
         var chakep = cakep[Math.floor(Math.random() * cakep.length)];
         var watak = wetak[Math.floor(Math.random() * wetak.length)];
-        var baik = getRandom(0, 100);
-        var burug = getRandom(0, 100);
-        var cerdas = getRandom(0, 100);
-        var berani = getRandom(0, 100);
-        var takut = getRandom(0, 100);
+        var baik = getRandomNumber(0, 100);
+        var burug = getRandomNumber(0, 100);
+        var cerdas = getRandomNumber(0, 100);
+        var berani = getRandomNumber(0, 100);
+        var takut = getRandomNumber(0, 100);
         profile = `*≡══《 Check @${bet.split("@")[0]} 》══≡*
 
 *Name :* ${pushname}
@@ -9560,7 +9560,7 @@ Cieeee, What's Going On❤️💖👀`,
       case "uglycheck":
         if (!m.isGroup) return XeonStickGroup();
         const cex = body.slice(0);
-        const cek2 = getRandom(0,100)
+        const cek2 = getRandomNumber(0,100)
         if (mentionByReply) {
           XliconBotInc.sendMessage(
             from,
