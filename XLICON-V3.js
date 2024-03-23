@@ -6303,7 +6303,7 @@ ${themeemoji} Title: ${result.title}`;
           }
         }
         break;
-        
+
       case "ytstalk":
         {
           if (!text) return replygcXlicon(`Channel Name?`);
@@ -6489,7 +6489,7 @@ Id : ${q.split("|")[0]}
 ID Zone: ${q.split("|")[1]}`);
         }
         break;
-        case "disguise":
+      case "disguise":
       case "fakeinfo":
         {
           let res = await fetchJson(
@@ -11247,6 +11247,59 @@ ${listAdmin}
             },
             { quoted: m }
           );
+        }
+        break;
+      //temp mails
+      case "tempmail":
+      case "tmg":
+        {
+          let res = await fetchJson(
+            "https://api.maher-zubair.tech/misc/tempmail"
+          );
+          replygcXlicon(
+            `*Temp Mail Generated*\n\n*Email*: ${res.result[0]}\n*ID*: ${res.result[1]}\n\nPlease use the *ID* to check emails. Example: ${prefix}tempib U2Vzc2lvbjqAMoScnm9KVZARWDpGFMBn`
+          );
+        }
+        break;
+      case "tempinbox":
+      case "tib":
+        {
+          if (!args[0]) {
+            return replygcXlicon(
+              `Specify valid temp mail ID. Type ${prefix}tempmail to generate one...`
+            );
+          }
+          async function getInboxData(qParam) {
+            try {
+              const response = await fetch(
+                `https://api.maher-zubair.tech/misc/get_inbox_tempmail?q=${qParam}`
+              );
+              const data = await response.json();
+              return data;
+            } catch (error) {
+              return replygcXlicon(`API is currently down. Try again later...`);
+            }
+          }
+          getInboxData(args[0]).then((data) => {
+            console.log(data);
+            if (!data.result) {
+              return replygcXlicon("Invalid ID. Enter correct Temp Mail ID.");
+            }
+            if (data.result[1] == 0) {
+              return replygcXlicon("Your Inbox is Empty...");
+            }
+            const emails = data.result[0];
+            let outputMessage = "INBOX:\n";
+            emails.forEach((email, index) => {
+              outputMessage += `\n*Email ${index + 1}:*\n`;
+              outputMessage += `* From: ${email.fromAddr}\n`;
+              outputMessage += `* To: ${email.toAddr}\n`;
+              outputMessage += `* Subject: ${email.headerSubject}\n`;
+              outputMessage += `* Text: ${email.text}\n`;
+              outputMessage += `* Download: ${email.downloadUrl}\n`;
+            });
+            replygcXlicon(outputMessage);
+          });
         }
         break;
 
