@@ -1513,7 +1513,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
     //total features
     const Xliconfeature = () => {
       var mytext = fs.readFileSync("./XLICON-V3.js").toString();
-      var numUpper = (mytext.match(/case '/g) || []).length;
+      var numUpper = (mytext.match(/case "/g) || []).length;
       return numUpper;
     };
     //autoreply
