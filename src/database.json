@@ -1,17 +1,6 @@
 {
   "users": {
     "923184070915@s.whatsapp.net": {
-      "serialNumber": "0eae1af5145d445f4e7a69739aa2e971",
-      "title": "Premium",
-      "afkTime": -1,
-      "badword": 0,
-      "afkReason": "",
-      "nick": "Oke",
-      "premium": "true",
-      "limit": 1000,
-      "totalLimit": 0
-    },
-    "923184070915@s.whatsapp.net": {
       "serialNumber": "84a6d900b59ff9b86da982ae409f5973",
       "title": "Premium",
       "afkTime": -1,
@@ -20,6 +9,28 @@
       "nick": "Oke",
       "premium": false,
       "limit": 1000,
+      "totalLimit": 0
+    },
+    "923051686704@s.whatsapp.net": {
+      "serialNumber": "9fe45bc42a742dcd2602bd14f2ea2485",
+      "title": "Premium",
+      "afkTime": -1,
+      "badword": 0,
+      "afkReason": "",
+      "nick": "Adnan Khalid Phd in Abnormal Psychology",
+      "premium": "true",
+      "limit": 1000,
+      "totalLimit": 0
+    },
+    "923111496427@s.whatsapp.net": {
+      "serialNumber": "d372ff62759460c2ba1962d222c96bf6",
+      "title": "User",
+      "afkTime": -1,
+      "badword": 0,
+      "afkReason": "",
+      "nick": "⚔️Solo-Life _Syco - Phyco⚔️",
+      "premium": "false",
+      "limit": 100,
       "totalLimit": 0
     }
   },
@@ -61,7 +72,7 @@
       "antilink": false,
       "antilinkgc": false
     },
-    "923184070915@s.whatsapp.net": {
+    "923444016791@s.whatsapp.net": {
       "badword": false,
       "antiforeignnum": false,
       "antibot": false,
@@ -77,6 +88,78 @@
       "antidocument": false,
       "anticontact": false,
       "antilink": false,
+      "antilinkgc": false
+    },
+    "923111496427@s.whatsapp.net": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": false,
+      "antilinkgc": false
+    },
+    "923051686704@s.whatsapp.net": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": false,
+      "antilinkgc": false
+    },
+    "120363142907033518@g.us": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": true,
+      "antilinkgc": false
+    },
+    "120363141520109507@g.us": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": true,
       "antilinkgc": false
     }
   },
@@ -113,8 +196,39 @@
           "alias": "923184070915"
         }
       }
+    },
+    "923051686704@s.whatsapp.net": {
+      "totalhit": 9,
+      "totalError": 0,
+      "online": false,
+      "autosticker": false,
+      "autobio": false,
+      "autoread": false,
+      "autoblocknum": false,
+      "onlyindia": false,
+      "onlyindo": false,
+      "onlygrub": false,
+      "onlypc": false,
+      "autorecordtype": false,
+      "autorecord": false,
+      "autotype": false,
+      "watermark": {
+        "packname": "𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑",
+        "author": "ᗰᗩᗪE ᗷY 𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿"
+      },
+      "about": {
+        "bot": {
+          "nick": "Adnan Khalid Phd in Abnormal Psychology",
+          "alias": "XLICON-V3-MD"
+        },
+        "owner": {
+          "nick": "+92 318 4070915",
+          "alias": "923184070915"
+        }
+      }
     }
   },
+  "message": {},
   "sticker": {},
   "others": {
     "vote": []
