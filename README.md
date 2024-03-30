@@ -185,10 +185,16 @@ NOW Deploy👇
 
 # `TUTORIALS`
 
- * Deploy on Heroku Video ⇓
+***Deploy on Heroku Video ⇓***
  <p align="left">
 <a href="https://youtu.be/gPPf3AzgDq0?si=ExGosf3FfC5PIREH"><img align="center" src="https://telegra.ph/file/de08dc0620a720b81035d.jpg" alt="DEPLOY" height="110" width="200" /></a>
-
+ </p>
+ </br>
+ 
+***Logs Error Fix Video ⇓***
+ <p align="left">
+<a href="https://youtu.be/P9PPuwCqL4c?si=vmlvopHRVEvAcdv5"><img align="center" src="https://i.ibb.co/BwdgN5Q/Blue-Modern-Eye-Catching-Vlog-You-Tube-Thumbnail.png" alt="DEPLOY" height="110" width="200" /></a>
+   
 ## `CREDITS` 
 <div><button id="boton" type="button">Baileys - By WhiskeySockets & adiwajshing</button></div>
 <a href="https://github.com/WhiskeySockets/Baileys"><img src="https://github.com/WhiskeySockets.png" width="150" height="150" alt="adiwajshing"/></a>
@@ -209,6 +215,13 @@ NOW Deploy👇
 **XLICON-V3** - By `Slahser Senpai`
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
+
+## 🏷️ `Contributer` 
+<a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
+  
+**XLICON-V3** - By `Dragiez`
+<br>
+`Development , Features Enhancement , Code Testing`
 
 -------
 
