@@ -1,4 +1,4 @@
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+y//══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //                                                                                                      //
 //                                 𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑-𝐌𝐃    𝐁𝐎𝐓                                                //
 //                                                                                                      //
@@ -16,17 +16,17 @@
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //*
 //  * @project_name : XLICON-V3-MD
-//  * @author : salmanytofficial
-//  * @youtube : https://www.youtube.com/@s4salmanyt
+//  * @author : sahilteamx
+//  * @youtube : https://youtube.com/@doraemonpro6858
 //   * @description : XLICON-V3 ,A Multi-functional whatsapp user bot.
 //*
 //*
 //base by DGXeon
 //re-upload? recode? copy code? give credit ya :)
 //Instagram: unicorn_xeon13
-//Telegram: t.me/ahmmitech
-//GitHub: @salmanytofficial
-//WhatsApp: +923184070915
+//Telegram: t.me/sahilteamx 
+//GitHub: @sahilteamx
+//WhatsApp: +918601600591
 //want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
 //   * Created By Github: DGXeon.
 //   * Credit To Xeon
@@ -326,7 +326,7 @@ function _0x33fb() {
     "../XLICON-V3.js",
     "Value\x20not\x20found",
     "error",
-    "\x20GITHUB:\x20salmanytofficial\x20",
+    "\x20GITHUB:\x20sahilteamx\x20",
     "Device\x20Logged\x20Out,\x20Please\x20Delete\x20Session\x20and\x20Scan\x20Again.",
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60",
     "path",
@@ -410,7 +410,7 @@ function _0x33fb() {
     "82936yhxYkL",
     "authState",
     "viewOnce",
-    "\x20INSTAGRAM:\x20@ahmmikun\x20",
+    "\x20INSTAGRAM:\x20@itzz_ash_siddique\x20",
     "Kjm8rnDFcpb04gQNSTbW2d",
     "groups.update",
     "readMessages",
@@ -698,7 +698,7 @@ async function startXliconBotInc() {
                   _0x420046 +
                   "\x20" +
                   _0x3aa69c +
-                  "\x0a\x20\x20\x20\x20│\x20➪\x20\x20\x20*Support\x20by\x20Subscribe\x20My\x20Channel\x20:*\x0a\x20\x20\x20\x20◎\x20\x20\x20\x20\x20youtube.com/@s4salmanyt\x0a\x20\x20\x20\x20└─────────────||"),
+                  "\x0a\x20\x20\x20\x20│\x20➪\x20\x20\x20*Support\x20by\x20Subscribe\x20My\x20Channel\x20:*\x0a\x20\x20\x20\x20◎\x20\x20\x20\x20\x20youtube.com/@doraemonpro6858\x0a\x20\x20\x20\x20└─────────────||"),
                   _0x1bbc17["sendMessage"](_0x1036b8["id"], {
                     text: xeonbody,
                     contextInfo: {
