@@ -16,17 +16,17 @@
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //*
 //  * @project_name : XLICON-V3-MD
-//  * @author : salmanytofficial
-//  * @youtube : https://www.youtube.com/@s4salmanyt
+//  * @author : sahilteamx
+//  * @youtube : https://youtube.com/@doraemonpro6858
 //   * @description : XLICON-V3 ,A Multi-functional whatsapp user bot.
 //*
 //*
 //base by DGXeon
 //re-upload? recode? copy code? give credit ya :)
 //Instagram: unicorn_xeon13
-//Telegram: t.me/ahmmitech
-//GitHub: @salmanytofficial
-//WhatsApp: +923184070915
+//Telegram: t.me/sahilteamx
+//GitHub: @sahilteamx
+//WhatsApp: +918601600591
 //want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
 //   * Created By Github: DGXeon.
 //   * Credit To Xeon
@@ -990,7 +990,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
           );
           result = {
             status: 200,
-            author: "SalmanSer",
+            author: "Sahil",
             url:
               "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" +
               data2.data.result.file_path,
@@ -4165,7 +4165,7 @@ ${cpus
               /github\.com\/([^/]+)\/([^/]+)/
             );
             const response = await axios.get(
-              `https://api.github.com/repos/salmanytofficial/XLICON-V3-MD`
+              `https://api.github.com/repos/sahilteamx/XLICON-V3-MD`
             );
             if (response.status === 200) {
               const repoData = response.data;
@@ -6144,7 +6144,7 @@ ${meg.result}`);
       case "gitclone":
         if (!args[0])
           return replygcXlicon(
-            `Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`
+            `Where is the link?\nExample :\n${prefix}${command} https://github.com/sahilteamx/XLICON-MD`
           );
         if (!isUrl(args[0]))
           return replygcXlicon("Link invalid! Please provide a valid URL.");
@@ -6410,7 +6410,7 @@ ${themeemoji} Title: ${result.title}`;
         {
           if (!q)
             return replygcXlicon(
-              `Example ${prefix + command} salmanytofficial`
+              `Example ${prefix + command} sahilteamx`
             );
           await XliconStickWait();
           let githubstalk = require("./lib/scraper");

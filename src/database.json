@@ -1,6 +1,6 @@
 {
   "users": {
-    "923184070915@s.whatsapp.net": {
+    "918601600591@s.whatsapp.net": {
       "serialNumber": "0eae1af5145d445f4e7a69739aa2e971",
       "title": "Premium",
       "afkTime": -1,
@@ -11,7 +11,7 @@
       "limit": 1000,
       "totalLimit": 0
     },
-    "923184070915@s.whatsapp.net": {
+    "918601600591@s.whatsapp.net": {
       "serialNumber": "84a6d900b59ff9b86da982ae409f5973",
       "title": "Premium",
       "afkTime": -1,
@@ -43,7 +43,7 @@
       "antilink": false,
       "antilinkgc": false
     },
-    "923184070915@s.whatsapp.net": {
+    "918601600591@s.whatsapp.net": {
       "badword": false,
       "antiforeignnum": false,
       "antibot": false,
@@ -61,7 +61,7 @@
       "antilink": false,
       "antilinkgc": false
     },
-    "923184070915@s.whatsapp.net": {
+    "918601600591@s.whatsapp.net": {
       "badword": false,
       "antiforeignnum": false,
       "antibot": false,
@@ -84,7 +84,7 @@
     "math": []
   },
   "settings": {
-    "923184070915@s.whatsapp.net": {
+    "918601600591@s.whatsapp.net": {
       "totalhit": 49,
       "totalError": 0,
       "online": false,
@@ -109,8 +109,8 @@
           "alias": "XLICON-V3-MD"
         },
         "owner": {
-          "nick": "+923184070915",
-          "alias": "923184070915"
+          "nick": "+918601600591",
+          "alias": "918601600591"
         }
       }
     }
