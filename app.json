@@ -4,18 +4,18 @@
   "description": "Xlicon-MD, A modular advanced wabot",
   "logo": "https://i.ibb.co/FsvbwqF/XLICON.jpg",
   "keywords": ["whatsapp", "bot", "md", "multi-device", "Xlicon", "Xlicon-MD", "wabot", "termux-bot", "sc-bot"],
-  "repository": "https://github.com/salmanytofficial/XLICON-V3-MD",
+  "repository": "https://github.com/sahilteamx/XLICON-V3-MD",
   "stack": "container",
   "env": {
     "SUDO": {
       "description": "Add Owwner Number Here",
       "required": true,
-      "value": "923184070915"
+      "value": "918601600591"
     },
     "SUDO_NAME": {
       "description": "Add Your Name Here",
       "required": true,
-      "value": "SᴀʟᴍᴀɴSᴇʀ"
+      "value": "Sᴀʜɪʟ᭄ᵏᶦᶯᴳ࿐™"
     },
      "HKEY": {
       "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
@@ -30,7 +30,7 @@
     "PREFIX": {
       "description": "Set Your Prefix Here",
       "required": true,
-      "value": "."
+      "value": "/"
     },
     "BOT_NAME": {
       "description": "Set Your Bot Name Here",
@@ -45,12 +45,12 @@
      "AUTHER_NAME": {
       "description": "Enter Auther Name Here",
       "required": false,
-      "value": "ＭＡＤＥ   ＢＹ   ＳＡＬＭＡＮ"
+      "value": "ＭＡＤＥ   ＢＹ   Sᴀʜɪʟ᭄ᵏᶦᶯᴳ࿐™"
      },
      "GL_VIP": {
       "description": "Enter Premium Members Numbers [ Each Saperated By Comma ]",
       "required": false,
-      "value": "923184070915,923264476886"
+      "value": "918601600591,918601600591"
      },
     "WELCOME_MSG": {
       "description": "Welcome Message True/False",
