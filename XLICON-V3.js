@@ -4165,7 +4165,7 @@ ${cpus
               /github\.com\/([^/]+)\/([^/]+)/
             );
             const response = await axios.get(
-              `https://api.github.com/repos/salmanytofficial/XLICON-V3-MD`
+              `https://api.github.com/repos/sahilteamx/XLICON-V3-MD`
             );
             if (response.status === 200) {
               const repoData = response.data;
@@ -6144,7 +6144,7 @@ ${meg.result}`);
       case "gitclone":
         if (!args[0])
           return replygcXlicon(
-            `Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XLICON-MD`
+            `Where is the link?\nExample :\n${prefix}${command} https://github.com/sahilteamx/XLICON-MD`
           );
         if (!isUrl(args[0]))
           return replygcXlicon("Link invalid! Please provide a valid URL.");
@@ -6410,7 +6410,7 @@ ${themeemoji} Title: ${result.title}`;
         {
           if (!q)
             return replygcXlicon(
-              `Example ${prefix + command} salmanytofficial`
+              `Example ${prefix + command} sahilteamx`
             );
           await XliconStickWait();
           let githubstalk = require("./lib/scraper");
