@@ -15,22 +15,22 @@
 //                                                                                                      //
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //*
-//  * @project_name : XLICON-V3-MD
-//  * @author : salmanytofficial
-//  * @youtube : https://www.youtube.com/@s4salmanyt
-//   * @description : XLICON-V3 ,A Multi-functional whatsapp user bot.
+//  * @project_name : WALLYJAY-V3-MD
+//  * @author : wallyjaytech
+//  * @youtube : https://www.youtube.com/@wallyjaytechy
+//   * @description : WALLYJAYTECH-V3 ,A Multi-functional whatsapp user bot.
 //*
 //*
-//base by DGXeon
+//base by wallyjay
 //re-upload? recode? copy code? give credit ya :)
-//Instagram: unicorn_xeon13
-//Telegram: t.me/ahmmitech
-//GitHub: @salmanytofficial
-//WhatsApp: +923184070915
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
-//   * Created By Github: DGXeon.
-//   * Credit To Xeon
-//   * © 2024 XLICON-V3-MD.
+//Instagram: wallyjaytechy
+//Telegram: t.me/anjafrieda
+//GitHub: @wallyjaytechy
+//WhatsApp: +2348144317152
+//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@wallyjaytechy
+//   * Created By Github: wallyjay.
+//   * Credit To wallyjay
+//   * © 2024 WALLYJAYTECH-V3-MD.
 // ⛥┌┤
 // */
 
