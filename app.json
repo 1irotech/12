@@ -1,8 +1,8 @@
 {
-  "name": "Xlicon-MD",
+  "name": "Wally-MD",
   "version": "3.0.5",
-  "description": "Xlicon-MD, A modular advanced wabot",
-  "logo": "https://i.ibb.co/FsvbwqF/XLICON.jpg",
+  "description": "Wally-MD, A modular advanced wabot",
+  "logo": "https://graph.org/file/99c8f663a3df96a5a54de.jpg",
   "keywords": ["whatsapp", "bot", "md", "multi-device", "Xlicon", "Xlicon-MD", "wabot", "termux-bot", "sc-bot"],
   "repository": "https://github.com/salmanytofficial/XLICON-V3-MD",
   "stack": "container",
@@ -10,12 +10,12 @@
     "SUDO": {
       "description": "Add Owwner Number Here",
       "required": true,
-      "value": "923184070915"
+      "value": "2348144317152"
     },
     "SUDO_NAME": {
       "description": "Add Your Name Here",
       "required": true,
-      "value": "SᴀʟᴍᴀɴSᴇʀ"
+      "value": "WALLYJAYTECH"
     },
      "HKEY": {
       "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
@@ -34,23 +34,23 @@
     },
     "BOT_NAME": {
       "description": "Set Your Bot Name Here",
-      "required": false,
-      "value": "Xʟɪᴄᴏɴ_Mᴅ_V3"
+      "required": true,
+      "value": "WALLYJAYTECH-MD"
     },
      "PACK_NAME": {
       "description": "Enter Pack Name Here",
-      "required": false,
-      "value": "𝐗𝐋𝐈𝐂𝐎𝐍-𝐕𝟑"
+      "required": true,
+      "value": "WALLYJAYTECH-𝐕𝟑"
      },
      "AUTHER_NAME": {
       "description": "Enter Auther Name Here",
-      "required": false,
-      "value": "ＭＡＤＥ   ＢＹ   ＳＡＬＭＡＮ"
+      "required": true,
+      "value": "ＭＡＤＥ   ＢＹ   WALLYJAY"
      },
      "GL_VIP": {
       "description": "Enter Premium Members Numbers [ Each Saperated By Comma ]",
-      "required": false,
-      "value": "923184070915,923264476886"
+      "required": true,
+      "value": "2348144317152"
      },
     "WELCOME_MSG": {
       "description": "Welcome Message True/False",
