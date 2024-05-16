@@ -1,17 +1,6 @@
 {
   "users": {
     "923184070915@s.whatsapp.net": {
-      "serialNumber": "0eae1af5145d445f4e7a69739aa2e971",
-      "title": "Premium",
-      "afkTime": -1,
-      "badword": 0,
-      "afkReason": "",
-      "nick": "Oke",
-      "premium": "true",
-      "limit": 1000,
-      "totalLimit": 0
-    },
-    "923184070915@s.whatsapp.net": {
       "serialNumber": "84a6d900b59ff9b86da982ae409f5973",
       "title": "Premium",
       "afkTime": -1,
@@ -19,6 +8,17 @@
       "afkReason": "",
       "nick": "Oke",
       "premium": false,
+      "limit": 1000,
+      "totalLimit": 0
+    },
+    "2348144317152@s.whatsapp.net": {
+      "serialNumber": "a02e68cf74af9451e08b5ab2cea0b9e4",
+      "title": "Premium",
+      "afkTime": -1,
+      "badword": 0,
+      "afkReason": "",
+      "nick": "WALLY JAY TECH",
+      "premium": "true",
       "limit": 1000,
       "totalLimit": 0
     }
@@ -61,7 +61,43 @@
       "antilink": false,
       "antilinkgc": false
     },
-    "923184070915@s.whatsapp.net": {
+    "2348144317152@s.whatsapp.net": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": false,
+      "antilinkgc": false
+    },
+    "923264476886@s.whatsapp.net": {
+      "badword": false,
+      "antiforeignnum": false,
+      "antibot": false,
+      "antiviewonce": false,
+      "antivirtex": false,
+      "antimedia": false,
+      "antiimage": false,
+      "antivideo": false,
+      "antiaudio": false,
+      "antipoll": false,
+      "antisticker": false,
+      "antilocation": false,
+      "antidocument": false,
+      "anticontact": false,
+      "antilink": false,
+      "antilinkgc": false
+    },
+    "2349134579615@s.whatsapp.net": {
       "badword": false,
       "antiforeignnum": false,
       "antibot": false,
@@ -113,8 +149,39 @@
           "alias": "923184070915"
         }
       }
+    },
+    "2348144317152@s.whatsapp.net": {
+      "totalhit": 43,
+      "totalError": 0,
+      "online": false,
+      "autosticker": false,
+      "autobio": true,
+      "autoread": true,
+      "autoblocknum": false,
+      "onlyindia": false,
+      "onlyindo": false,
+      "onlygrub": false,
+      "onlypc": false,
+      "autorecordtype": false,
+      "autorecord": true,
+      "autotype": false,
+      "watermark": {
+        "packname": "WALLY-𝐕𝟑",
+        "author": "ᗰᗩᗪE ᗷY WALLY JAY"
+      },
+      "about": {
+        "bot": {
+          "nick": "WALLY JAY TECH",
+          "alias": "WALLY-V3-MD"
+        },
+        "owner": {
+          "nick": "WALLY JAY TECH",
+          "alias": "2348144317152"
+        }
+      }
     }
   },
+  "message": {},
   "sticker": {},
   "others": {
     "vote": []
