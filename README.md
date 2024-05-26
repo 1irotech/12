@@ -216,6 +216,13 @@ NOW Deploy👇
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
 
+## 🏷️ `Contributer` 
+<a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
+  
+**XLICON-V3** - By `Dragiez`
+<br>
+`Development , Features Enhancement , Code Testing`
+
 -------
 
 ## 🌈 `Support Us`
