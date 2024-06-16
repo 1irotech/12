@@ -1,3 +1,3 @@
 {
-	"name": "Xlicon Bot Multi Device "
+	"name": "𝙍𝙞𝙘𝙝𝙞𝙚𝙚 𝙩𝙚𝙘𝙝 𝙬𝙞𝙯𝙖𝙧𝙙"
 }
