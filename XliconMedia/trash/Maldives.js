@@ -1,3 +1,3 @@
 {
-	"name": "Mak j Multi Device "
+	"name": "Mak j  Multi Device "
 }
