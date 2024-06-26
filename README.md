@@ -1,29 +1,29 @@
 
 
-# `XLICON-V3-MD`
+# `M.M-MD`
 <br>
 <br>
 
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=3F00FF&center=true&width=900&height=100&lines=Its%20XLICON-V3-MD;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20SALMAN%20AHMAD)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=3F00FF&center=true&width=900&height=100&lines=Its%20M.M-MD;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20MALDIVES%20MAK)
 <p align="center">
   
->XLICON-V3-MD is based on :
->- [Cheems V10](https://github.com/DGXeon) by [DGXeon](https://github.com/DGXeon) (License: Apache License 2.0)
+>M.M-MD is based on :
+>- [Vinta v V1.0](https://github.com/Maldii14) by [Maldivesmak](https://github.com/Maldii14) (License: Apache License 2.0)
 >
-> :unicorn: Don't forget to check out! :point_right: [Cheems V10](https://github.com/DGXeon)
+> :unicorn: Don't forget to check out! :point_right: [Vinta V1.0](https://github.com/Maldii14)
 </p>
 
-## 🌟 `Bot Intro and Features`
-[![XLICON](https://i.ibb.co/sgdGM1P/XLICON-V3.jpg)](https://youtube.com/@s4salmanyt)
+## 🌟 `M Bot Intro and Features`
+[![M.M](https://telegra.ph/file/a977c54af76efc743dcc3.jpg)](https://wa.me/message/USWDDH34M2TWH1)
 
 <p align="center">
-<a href="https://github.com/salmanytofficial"><img title="Author" src="https://img.shields.io/badge/CREATOR-SALMAN SER-black.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/Maldii14"><img title="Author" src="https://img.shields.io/badge/CREATOR-Maldives mak-black.svg?style=for-the-badge&logo=github"></a>
 
-### ℹ️ **About XLICON-V3**
-XLICON-V3 is a Cool Multi-Device WhatsApp bot developed by [Salman Ahamed](https://github.com/salmanytofficial). It offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes.
+### ℹ️ **About M-V3**
+M-V3 is a Cool Multi-Device WhatsApp bot developed by [Maldives Mak](https://github.com/salmanytofficial). It offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes.
 
-<p align="center"><img src="https://profile-counter.glitch.me/{XLICON-V3}/count.svg" alt="SALMAN AHMAD :: Visitor's Count" /></p>
+<p align="center"><img src="https://profile-counter.glitch.me/{M.M-V3}/count.svg" alt="MALDIVES MAK :: Visitor's Count" /></p>
 
 ### 📊 **Bot Statistics**
 <p align="center">
@@ -42,29 +42,18 @@ XLICON-V3 is a Cool Multi-Device WhatsApp bot developed by [Salman Ahamed](https
   
 ####
 
-*XLICON-V3* - A Advanced Multi Device whatsapp bot Based on *CHEEMS V10*
+*M-V3* - A Advanced Multi Device whatsapp bot Based on *Vinta V1.0*
 -------
 
 ***
 
 ## ⭐ `Star This Repo`
-If you find XLICON-V3-MD helpful, consider giving it a star ⭐ to show your appreciation.
+If you find M.M-MD helpful, consider giving it a star ⭐ to show your appreciation.
 
 Thanks to all contributors! 🚀
 
-## 💲 ```Donate Me```
-
-- [`Buy ME A Coffee ☕ `](https://i.ibb.co/SBXWb1R/donate.jpg)
-
-<p align="left">
-Scan qr code from the above button, u can pay through Buy Me A Coffee...
-</p>
-
-- [`Support Me On Patreon ☕ `](https://www.patreon.com/ahmmikun/membership)
-
-<p align="left">
-Click On The Link To Donate ME...
-</p>
+## 💲 ```JOIN MY CHANNEL```
+ https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R
 
 ## 🚀 `Bot Features`
 | Feature                          | Description                                             | Available    | Version    |
@@ -82,11 +71,11 @@ Click On The Link To Donate ME...
 ## 🛠️ `Installation Methods`
 1. Fork the repo
     <br>
-<a href='https://github.com/salmanytofficial/XLICON-V3-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/Maldii14/M-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 2. Get Creds Json (SERVER 1)
     <br>
-<a href='https://xlicon-v3-web.onrender.com' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://Mak j-v3-web.onrender.com' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 2. Get Creds Json (SERVER 2)
     <br>
@@ -203,56 +192,42 @@ NOW Deploy👇
 
 
 ## 📛 `OWNER` 
-<a href="https://github.com/salmanytofficial"><img src="https://github.com/salmanytofficial.png" width="250" height="250" alt="Salman Ahmad"/></a>
+<a href="https://github.com/Maldii14"><img src="https://github.com/Maldii14.png" width="250" height="250" alt="Mak j"/></a>
   
-**XLICON-V3** - By `salmanytofficial`
+**M.M-V3** - By `Maldives mak`
 <br>
 `Development , Maintainence , Bot Updates`
 
 ## 🏷️ `Main Dev` 
 <a href="https://github.com/V-E-N-O-X"><img src="https://github.com/V-E-N-O-X.png" width="250" height="250" alt="VENOX"/></a>
   
-**XLICON-V3** - By `Slahser Senpai`
+**M.M-V3** - By `Maldives Mak`
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
 
 ## 🏷️ `Contributer` 
 <a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
   
-**XLICON-V3** - By `Dragiez`
+**M.M-V3** - By `Dragiez`
 <br>
 `Development , Features Enhancement , Code Testing`
 
 -------
 
 ## 🌈 `Support Us`
-- **Mail Us:** [salmansheikh2500@gmail.com](mailto:salmansheikh2500@gmail.com)
+- **Mail Us:** [maldivesmak@gmail.com](mailto: maldiimak@gmail.com)
 - **Join Our Support Group:**
  <p align="center">
    
   ## ``Support Group``
    
-- [`XLICON Community`](https://chat.whatsapp.com/J8U0HyBlokoC14UwmisO0b)
-- [`Official Group`](https://chat.whatsapp.com/C4ivwZKuh5bLJkqfYNPQsk)
-- [`Support Gc`](https://chat.whatsapp.com/Lda5nx04JZJJsKsibu0KFR)
+- [`M Community`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
+- [`Official Group`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
+- [`Support Gc`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
 
-<a aria-label="Join our chats" href="https://wa.me/923184070915?text=Hi!! SalmanAhmad Sir, I need Your Help" target="_blank">
+<a aria-label="Join our chats" href="https://wa.me/254758732775?text=Hi!! SalmanAhmad Sir, I need Your Help" target="_blank">
     <img alt="whatsapp" src="https://img.shields.io/badge/Owner%20Whatsapp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </p>
-
-- [`Support Me On Patreon ☕ `](https://www.patreon.com/ahmmikun/membership)
-
-<p align="left">
-Click On The Link To Donate ME...
-</p>
-
-
-- **Buy Me a Coffee:** `Your support will help me stay motivated and continue working on exciting projects like this one.`
-
-<a href="https://www.buymeacoffee.com/ahmmikun">
-<img src="https://i.ibb.co/KNnhcvX/bmc-button.png" alt="Buy Me Coffee" height="40" width="150" style="margin-left: 60px;">
-</a>
-
 
 ## 🔒 `Reminder`
 Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
@@ -267,8 +242,8 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/<your gitHub Username>/XLICON-V3-MD.git
-cd XLICON-V3-MD
+git clone https://github.com/Maldii14/M.M-MD.git
+cd M-V3-MD
 
 npm start
 ```
@@ -284,8 +259,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/<your gitHub Username>/XLICON-V3-MD
-cd XLICON-V3-MD
+git clone https://github.com/Maldii14/V-MD
+cd M-V3-MD
 yarn install
 npm start
 ```
