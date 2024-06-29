@@ -175,10 +175,6 @@ NOW Deploy👇
 <a href="https://youtu.be/gPPf3AzgDq0?si=ExGosf3FfC5PIREH"><img align="center" src="https://telegra.ph/file/de08dc0620a720b81035d.jpg" alt="DEPLOY" height="110" width="200" /></a>
  </p>
  </br>
- 
-***Logs Error Fix Video ⇓***
- <p align="left">
-<a href="https://youtu.be/P9PPuwCqL4c?si=vmlvopHRVEvAcdv5"><img align="center" src="https://i.ibb.co/BwdgN5Q/Blue-Modern-Eye-Catching-Vlog-You-Tube-Thumbnail.png" alt="DEPLOY" height="110" width="200" /></a>
    
 ## `CREDITS` 
 <div><button id="boton" type="button">Baileys - By WhiskeySockets & adiwajshing</button></div>
@@ -192,14 +188,14 @@ NOW Deploy👇
 `Development , Maintainence , Bot Updates`
 
 ## 🏷️ `Main Dev` 
-<a href="https://github.com/V-E-N-O-X"><img src="https://github.com/V-E-N-O-X.png" width="250" height="250" alt="VENOX"/></a
+<a href="https://github.com/Maldii14"><img src="https://github.com/Maldii14.png" width="250" height="250" alt="VENOX"/></a
   
 ## **MAIN DEVELOPER**  `Mak`
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
 
 ## 🏷️ `Contributer` 
-<a href="https://github.com/MakaniJ"><img src="https://telegra.ph/file/cde7d650110d94e3aa8b1.jpg" width="250" height="250" alt="DRAGIEZ"/></a>
+<a href="https://github.com/MakaniJ"><img src="https://telegra.ph/file/45640600616386e26b451.jpg" width="250" height="250" alt="VINTA V"/></a>
   
 **M-BOT** - By `M.MAK`
 <br>
