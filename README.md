@@ -11,7 +11,7 @@
 >M.M-MD is based on :
 >- [Vinta v V1.0](https://github.com/Maldii14) by [Maldivesmak](https://github.com/Maldii14) (License: Apache License 2.0)
 >
-> :unicorn: Don't forget to check out! :point_right: [Vinta V1.0](https://github.com/Maldii14)
+> 🇰🇪: Don't forget to check out! :point_right: [Vinta V1.0](https://github.com/Maldii14)
 </p>
 
 ## 🐲 `M Bot Intro and Features`
