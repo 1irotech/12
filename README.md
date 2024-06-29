@@ -199,7 +199,7 @@ NOW Deploy👇
 `Development , Features Enhancement , Plugin Debbuging`
 
 ## 🏷️ `Contributer` 
-<a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
+<a href="https://github.com/MakaniJ"><img src="https://telegra.ph/file/cde7d650110d94e3aa8b1.jpg" width="250" height="250" alt="DRAGIEZ"/></a>
   
 **M-BOT** - By `M.MAK`
 <br>
