@@ -1,6 +1,6 @@
 
 
-# `M.M-MD`
+# `M-BOT`
 <br>
 <br>
 
@@ -8,7 +8,7 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=FFDE00FF&center=true&width=900&height=100&lines=Its%20M.M-MD;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20MALDIVES%20MAK)
 <p align="center">
   
->M.M-MD is based on :
+>M-BOT-MD is based on :
 >- [Vinta v V1.0](https://github.com/Maldii14) by [Maldivesmak](https://github.com/Maldii14) (License: Apache License 2.0)
 >
 > 🇰🇪: Don't forget to check out! :point_right: [Star ✨ and Fork](https://github.com/Maldii14)
@@ -20,10 +20,10 @@
 <p align="center">
 <a href="https://github.com/Maldii14"><img title="Author" src="https://img.shields.io/badge/CREATOR-Maldives mak-black.svg?style=for-the-badge&logo=github"></a>
 
-### 🐉**About M-V3**
-M-V3 is a Cool Multi-Device WhatsApp bot developed by [Maldives Mak](https://github.com/salmanytofficial). It offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes.
+### 🐉**About M-BOT**
+M-Bot is a Cool Multi-Device WhatsApp bot developed by .[Maldives Mak] (https://github.com/Maldii14). This bot offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes with WhatsApp.
 
-<p align="center"><img src="https://profile-counter.glitch.me/{M.M-V3}/count.svg" alt="MALDIVES MAK :: Visitor's Count" /></p>
+<p align="center"><img src="https://profile-counter.glitch.me/{M-Bot}/count.svg" alt="MALDIVES MAK :: Visitor's Count" /></p>
 
 ### 📊 **Bot Statistics**
 <p align="center">
@@ -42,13 +42,13 @@ M-V3 is a Cool Multi-Device WhatsApp bot developed by [Maldives Mak](https://git
   
 ####
 
-*M-V3* - A Advanced Multi Device whatsapp bot Based on *Vinta V1.0*
+*M-BOT* - A Advanced Multi Device whatsapp bot Based on *Vinta V1.0*
 -------
 
 ***
 
 ## ⭐ `Star This Repo`
-If you find M.M-MD helpful, consider giving it a star ⭐ to show your appreciation.
+If you find M-BOT helpful, consider giving it a star ⭐ to show your appreciation.
 
 Thanks to all contributors! 🚀
 
@@ -59,7 +59,7 @@ Thanks to all contributors! 🚀
 | Feature                          | Description                                             | Available    | Version    |
 | ---------------------------------| ------------------------------------------------------- | ------------ | ---------- |
 | Multi-Device Support             | Operate the bot on multiple devices simultaneously      | 🎀           | 3.0        |
-| AI Chat Bot                      | Bot Can Reply To Questions                              | 🎀           | 3.0        |
+| AI Chat Bot                      | M-Bot Can Reply To Questions                              | 🎀           | 3.0        |
 | Downloader Commands              | Download various types of content from the internet     | 🎀          | 3.0        |
 | Hidden NSFW Commands             | Access a range of NSFW commands hidden in the bot       | 🎀          | 3.0        |
 | Logo Commands                    | Generate logos using specialized commands               | 🎀          | 3.0        |
@@ -183,14 +183,11 @@ NOW Deploy👇
 ## `CREDITS` 
 <div><button id="boton" type="button">Baileys - By WhiskeySockets & adiwajshing</button></div>
 <a href="https://github.com/WhiskeySockets/Baileys"><img src="https://github.com/WhiskeySockets.png" width="150" height="150" alt="adiwajshing"/></a>
-<div><button id="boton" type="button">Base  - By CHEEMS BOTZ</button></div>
-<a href="https://github.com/DGXeon"><img src="https://github.com/DGXeon.png" width="150" height="150" alt="Xeon"/></a>
-
 
 ## 📛 `OWNER` 
 <a href="https://github.com/Maldii14"><img src="https://github.com/Maldii14.png" width="250" height="250" alt="Mak j"/></a>
   
-**M.M-V3** - By `Maldives mak`
+**M-BOT** - By `Maldives mak`
 <br>
 `Development , Maintainence , Bot Updates`
 
@@ -204,7 +201,7 @@ NOW Deploy👇
 ## 🏷️ `Contributer` 
 <a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
   
-**M.M-V3** - By `M.MAK`
+**M-BOT** - By `M.MAK`
 <br>
 `Development , Features Enhancement , Code Testing`
 
@@ -217,11 +214,11 @@ NOW Deploy👇
    
   ## ``Support Group``
    
-- [`M Community`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
+- [`M-BOT CHANNEL 🌿`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
 - [`Official Group`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
 - [`Support Gc`](https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R)
 
-<a aria-label="Join our chats" href="https://wa.me/254758732775?text=Hi!! SalmanAhmad Sir, I need Your Help" target="_blank">
+<a aria-label="Join our chats" href="https://wa.me/254758732775?text=Hi!! MALDIVES MAK Sir, I need Your Help" target="_blank">
     <img alt="whatsapp" src="https://img.shields.io/badge/Owner%20Whatsapp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </p>
 
