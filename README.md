@@ -14,13 +14,13 @@
 > :unicorn: Don't forget to check out! :point_right: [Vinta V1.0](https://github.com/Maldii14)
 </p>
 
-## 🌟 `M Bot Intro and Features`
+## 🐲 `M Bot Intro and Features`
 [![M.M](https://telegra.ph/file/a977c54af76efc743dcc3.jpg)](https://wa.me/message/USWDDH34M2TWH1)
 
 <p align="center">
 <a href="https://github.com/Maldii14"><img title="Author" src="https://img.shields.io/badge/CREATOR-Maldives mak-black.svg?style=for-the-badge&logo=github"></a>
 
-### ℹ️ **About M-V3**
+### 🐉**About M-V3**
 M-V3 is a Cool Multi-Device WhatsApp bot developed by [Maldives Mak](https://github.com/salmanytofficial). It offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes.
 
 <p align="center"><img src="https://profile-counter.glitch.me/{M.M-V3}/count.svg" alt="MALDIVES MAK :: Visitor's Count" /></p>
@@ -52,21 +52,21 @@ If you find M.M-MD helpful, consider giving it a star ⭐ to show your appreciat
 
 Thanks to all contributors! 🚀
 
-## 💲 ```JOIN MY CHANNEL```
+## 🐎 ```JOIN MY CHANNEL```
  https://whatsapp.com/channel/0029VaWrCuH35fLuVP2iCc2R
 
-## 🚀 `Bot Features`
+## 🧩🧩🧩🧩🧩🧩🧩 `Bot Features`
 | Feature                          | Description                                             | Available    | Version    |
 | ---------------------------------| ------------------------------------------------------- | ------------ | ---------- |
-| Multi-Device Support             | Operate the bot on multiple devices simultaneously      | ✅           | 3.0        |
-| AI Chat Bot                      | Bot Can Reply To Questions                              | ✅           | 3.0        |
-| Downloader Commands              | Download various types of content from the internet     | ✅           | 3.0        |
-| Hidden NSFW Commands             | Access a range of NSFW commands hidden in the bot       | ✅           | 3.0        |
-| Logo Commands                    | Generate logos using specialized commands               | ✅           | 3.0        |
-| Anime Commands                   | Explore anime-related commands and features             | ✅           | 3.0        |
-| Bot Cantrol Commands             | Cantrol Bot Without Opening Deploy Platform             | ✅           | 3.0        |
-| Various Games                    | Enjoy a variety of games within the bot                 | ✅           | 3.0        |
-| Audio/Video Editor Commands      | Edit audio and video files with bot commands            | ✅           | 3.0        |
+| Multi-Device Support             | Operate the bot on multiple devices simultaneously      | 🎀           | 3.0        |
+| AI Chat Bot                      | Bot Can Reply To Questions                              | 🎀           | 3.0        |
+| Downloader Commands              | Download various types of content from the internet     | 🎀          | 3.0        |
+| Hidden NSFW Commands             | Access a range of NSFW commands hidden in the bot       | 🎀          | 3.0        |
+| Logo Commands                    | Generate logos using specialized commands               | 🎀          | 3.0        |
+| Anime Commands                   | Explore anime-related commands and features             | 🎀          | 3.0        |
+| Bot Cantrol Commands             | Cantrol Bot Without Opening Deploy Platform             | 🎀           | 3.0        |
+| Various Games                    | Enjoy a variety of games within the bot                 | 🎀           | 3.0        |
+| Audio/Video Editor Commands      | Edit audio and video files with bot commands            | 🎀           | 3.0        |
 
 ## 🛠️ `Installation Methods`
 1. Fork the repo
