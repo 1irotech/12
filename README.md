@@ -5,7 +5,7 @@
 <br>
 
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=3F00FF&center=true&width=900&height=100&lines=Its%20M.M-MD;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20MALDIVES%20MAK)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=FFDE00FF&center=true&width=900&height=100&lines=Its%20M.M-MD;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20MALDIVES%20MAK)
 <p align="center">
   
 >M.M-MD is based on :
@@ -27,14 +27,14 @@ M-V3 is a Cool Multi-Device WhatsApp bot developed by [Maldives Mak](https://git
 
 ### 📊 **Bot Statistics**
 <p align="center">
-<a href="https://github.com/salmanytofficial/followers"><img title="Followers" src="https://img.shields.io/github/followers/salmanytofficial?color=red&style=flat-square"></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/salmanytofficial/XLICON-V3-MD?color=blue&style=flat-square"></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/salmanytofficial/XLICON-V3-MD?color=red&style=flat-square"></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/salmanytofficial/XLICON-V3-MD?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD"><img title="Open Source" src="https://img.shields.io/badge/Author-Salman%20Ser.-red?v=103"></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/salmanytofficial/XLICON-V3-MD?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsalmanytofficial%2FXLICON-V3-MD&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/salmanytofficial/XLICON-V3-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/Maldii14/followers"><img title="Followers" src="https://img.shields.io/github/followers/Maldii14?color=red&style=flat-square"></a>
+<a href="https://github.com/Maldii14/M.M-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Maldii14/M.M-MD?color=green&style=flat-square"></a>
+<a href="https://github.com/Maldii14/M.M-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Maldii14/M.M-MD?color=pink&style=flat-square"></a>
+<a href="https://github.com/Maldii14/M.M-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Maldii14/M.M-MD?label=Watchers&color=yellow&style=flat-square"></a>
+<a href="https://github.com/Maldii14/M.M-MD"><img title="Open Source" src="https://img.shields.io/badge/Author-Maldives%20Mak.-red?v=103"></a>
+<a href="https://github.com/Maldii14/M.M-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/Maldii14/M.M-MD?style=flat-square&color=green"></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMaldii14%2FM.M-MD&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://github.com/Maldii14/M.M-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 </p>
 <p align='center'>
 </p>
@@ -73,11 +73,7 @@ Thanks to all contributors! 🚀
     <br>
 <a href='https://github.com/Maldii14/M-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
-2. Get Creds Json (SERVER 1)
-    <br>
-<a href='https://Mak j-v3-web.onrender.com' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
-
-2. Get Creds Json (SERVER 2)
+1. Get (SESSION_ID) Creds Json
     <br>
 <a href='https://replit.com/@S4SalmanYt/XLICON-V3-PAIRING' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id_2-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
@@ -199,22 +195,22 @@ NOW Deploy👇
 `Development , Maintainence , Bot Updates`
 
 ## 🏷️ `Main Dev` 
-<a href="https://github.com/V-E-N-O-X"><img src="https://github.com/V-E-N-O-X.png" width="250" height="250" alt="VENOX"/></a>
+<a href="https://github.com/V-E-N-O-X"><img src="https://github.com/V-E-N-O-X.png" width="250" height="250" alt="VENOX"/></a
   
-**M.M-V3** - By `Maldives Mak`
+## **MAIN DEVELOPER**  `Mak`
 <br>
 `Development , Features Enhancement , Plugin Debbuging`
 
 ## 🏷️ `Contributer` 
 <a href="https://github.com/dragiez"><img src="https://github.com/dragiez.png" width="250" height="250" alt="DRAGIEZ"/></a>
   
-**M.M-V3** - By `Dragiez`
+**M.M-V3** - By `M.MAK`
 <br>
 `Development , Features Enhancement , Code Testing`
 
 -------
 
-## 🌈 `Support Us`
+## ✋ `Support `
 - **Mail Us:** [maldivesmak@gmail.com](mailto: maldiimak@gmail.com)
 - **Join Our Support Group:**
  <p align="center">
@@ -235,7 +231,7 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 
 ```
 
-## `Reminder`
+## `SIMPLE NOTE 🚫🚫`
    
 ## 
 - This bot is not made by `WhatsApp Inc.` So misusing the bot might `ban` your `WhatsApp account!`(Though your WhatsApp account can be unbanned only once.)
@@ -246,10 +242,9 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 ## `NOTICE`
    
 ## 
-- Not For Sale
+- BOT STRICTLY Not For Sale
 - Don't Forget to Give Credits If you are using or Reuploading My Plugins/files
 - Have A Good Day Ahead
-- Don't Use This Script As Your Bot Base 
 ---
 
  <br><br>
